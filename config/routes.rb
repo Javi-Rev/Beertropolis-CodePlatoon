@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   #   resources :reviews
   # end
 
-  root 'welcome#index'
+  root 'beers#index'
 
   get '/beers/:id', to: 'beers#show', as: 'beer'
 
