@@ -3,7 +3,7 @@ require 'test_helper'
 class ReviewsTest < ActionDispatch::IntegrationTest
 
   def test_there_are_reviews_on_the_individual_show_page_for_a_single_beer
-    beer = Beer.create!(name: 'Zombie Dust', type: 'American Pale Ale', manufacturer: 'Three Floyds')
+    beer = Beer.create!(name: 'Zombie Dust', style: 'Ale', manufacturer: 'Three Floyds')
 
     page.visit root_path
     assert root_path, page.current_path
@@ -16,8 +16,11 @@ class ReviewsTest < ActionDispatch::IntegrationTest
   end
 
   def test_i_can_create_a_beer_review
+    beer = Beer.create!(name: 'Alpha King', style: 'Lager', manufacturer: 'Hateful')
+    require "pry"
+    binding.pry
 
-    page.visit show_path
+    page.visit beer_path
     assert page.has_content?('Add Review')
     page.click_link('Add Review')
     fill_in('title', :with => 'Awesome')
@@ -27,7 +30,7 @@ class ReviewsTest < ActionDispatch::IntegrationTest
     fill_in('rating', :with => 5)
     page.click_button('Submit')
 
-    assert show_path, page.current_path
+    assert beer_path, page.current_path
     assert page.has_content?('Awesome')
     assert page.has_content?('I love this beer')
     assert page.has_content?(60604)
