@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
-  
-  resources :beers do
-    resources :reviews
-  end
-  
+
+  # resources :beers do
+  #   resources :reviews
+  # end
+
   root 'welcome#index'
 
-  get '/beers/:beer_id/reviews/:id' => 'reviews#show'
+  get '/beers/:id', to: 'beers#show', as: 'beer'
 
 
-  
+
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
