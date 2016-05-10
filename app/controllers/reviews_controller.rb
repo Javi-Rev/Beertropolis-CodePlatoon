@@ -7,7 +7,7 @@ class ReviewsController < ApplicationController
 
   def destroy
     @beer = Beer.find(params[:beer_id])
-    @review = Beer.review.find(review_params)
+    @review = @beer.reviews.find(params[:id])
     @review.destroy
 
     redirect_to beer_path(@beer)
