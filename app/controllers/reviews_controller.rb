@@ -9,6 +9,8 @@ class ReviewsController < ApplicationController
     @beer = Beer.find(params[:beer_id])
     @review = Beer.review.find(review_params)
     @review.destroy
+
+    redirect_to beer_path(@beer)
   end
 
   private
