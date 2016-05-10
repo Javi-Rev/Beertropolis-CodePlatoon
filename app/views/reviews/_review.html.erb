@@ -1,0 +1,26 @@
+<% @reviews.each do |r| %>
+  <p>
+  <strong>Manufacturer:</strong>
+    <%= r.manufacturer %>
+  </p>
+  <p>
+  <strong>Beer Name:</strong>
+    <%= r.name %>
+  </p>
+  <p>
+  <strong>Price:</strong>
+    <%= r.price %>
+  </p>
+  <p>
+  <strong>Zip Code:</strong>
+    <%= r.location %>
+  </p>
+  <p>
+  <strong>Rating:</strong>
+    <%= r.rating %>
+  </p>
+  <p>
+  <strong>Review Text:</strong>
+    <%= r.body %>
+  </p>
+<% end %>
