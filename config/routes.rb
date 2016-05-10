@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   # get '/beers/:beer_id/reviews', to: 'reviews#index', as: 'review'
   get '/auth/twitter', as: 'login'
   get 'auth/twitter/callback', to: "sessions#create"
-
+  get 'api/beers', to: 'api#beers'
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'

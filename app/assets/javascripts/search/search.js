@@ -5,8 +5,10 @@ Vue.component('vue-search', {
       searchText: ''
   }
   },
+
   methods: {
     searchBeer: function () {
+
     }
   }
 })
