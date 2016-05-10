@@ -29,9 +29,9 @@ ActiveRecord::Schema.define(version: 20160510141915) do
     t.integer "rating"
     t.text    "body"
     t.integer "beer_id"
+  end
 
-    create_table "users", force: :cascade do |t|
-
-    end
+  create_table "users", force: :cascade do |t|
+  end
 
 end
