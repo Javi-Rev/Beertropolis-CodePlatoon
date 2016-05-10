@@ -6,7 +6,9 @@ Rails.application.routes.draw do
 
   root 'beers#index'
 
+  get '/auth/twitter', as: 'login'
   get '/beers/:id', to: 'beers#show', as: 'beer'
+  get 'auth/twitter/callback', to: "sessions#create"
 
 
 
