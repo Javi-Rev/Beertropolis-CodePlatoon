@@ -1,4 +1,4 @@
-require 'test_helper'
+require '../test_helper'
 
 class ReviewsTest < ActionDispatch::IntegrationTest
 
@@ -15,23 +15,31 @@ class ReviewsTest < ActionDispatch::IntegrationTest
     assert page.has_content?('Reviews')
   end
 
-  def test_i_can_create_a_beer_review
-    skip
+  def test_i_can_create_a_beer_review_and_edit_and_delete_it_too
     beer = Beer.create!(id: 2, name: 'Alpha King', style: 'Lager', manufacturer: 'Hateful')
 
-    page.visit beer_path
-    assert page.has_content?('Add Review')
-    page.click_link('Add Review')
-    fill_in('title', :with => 'Awesome')
-    fill_in('body', :with => 'I love this beer')
-    fill_in('price', :with => 25.00)
-    fill_in('zip code', :with => 60604)
-    fill_in('rating', :with => 5)
-    page.click_button('Submit')
+    page.visit beer_path(id: 2)
+    assert page.has_content?('Reviews')
+    page.click_button('Create Review')
+    fill_in('Name', :with => 'Awesome')
+    fill_in('Price', :with => 25.00)
+    fill_in('Location', :with => 60604)
+    fill_in('Rating', :with => 5)
+    page.click_button('Create Review')
 
-    assert beer_path, page.current_path
+    assert beer_path(id: 2), page.current_path
     assert page.has_content?('Awesome')
-    assert page.has_content?('I love this beer')
     assert page.has_content?(60604)
+
+    assert page.has_content?('Edit')
+    page.click_link('Edit')
+    fill_in('name', :with => 'edited name')
+    page.click_button('Submit')
+    assert page.has_content?('edited name')
+
+    assert page.has_content?('Delete')
+    page.click_link('Delete')
+    refute page.has_content?('edited name')
   end
+  
 end
