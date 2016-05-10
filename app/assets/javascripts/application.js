@@ -16,3 +16,4 @@
 //= require turbolinks
 //= require vue
 //= require_tree .
+
