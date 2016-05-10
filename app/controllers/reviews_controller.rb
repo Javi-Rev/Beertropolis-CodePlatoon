@@ -2,12 +2,15 @@ class ReviewsController < ApplicationController
   def create
     @beer = Beer.find(params[:beer_id])
     @review = @beer.reviews.create(review_params)
+    redirect_to beer_path(@beer)
   end
 
   def destroy
     @beer = Beer.find(params[:beer_id])
-    @review = Beer.review.find(review_params)
+    @review = @beer.reviews.find(params[:id])
     @review.destroy
+
+    redirect_to beer_path(@beer)
   end
 
   private
