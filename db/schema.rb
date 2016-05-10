@@ -21,6 +21,11 @@ ActiveRecord::Schema.define(version: 20160510141915) do
     t.datetime "updated_at",   null: false
   end
 
+  create_table "users", force: :cascade do |t|
+    t.string "uid"
+    t.string "name"
+  end
+
   create_table "reviews", force: :cascade do |t|
     t.string  "manufacturer"
     t.string  "name"
@@ -30,8 +35,4 @@ ActiveRecord::Schema.define(version: 20160510141915) do
     t.text    "body"
     t.integer "beer_id"
   end
-
-  create_table "users", force: :cascade do |t|
-  end
-
 end
