@@ -7,6 +7,13 @@ class BeersController < ApplicationController
     @beer = Beer.find(params[:id])
   end
 
+  def new
+    @beer = Beer.new
+  end
+
+  def create
+  end
+
   private
     def beer_params
       params.require(:beer).permit(:name, :type, :manufacturer)
