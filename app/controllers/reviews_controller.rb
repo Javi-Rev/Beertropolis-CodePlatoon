@@ -1,7 +1,7 @@
 class ReviewsController < ApplicationController
   def create
     @beer = Beer.find(params[:beer_id])
-    @review = Beer.review.create(review_params)
+    @review = @beer.reviews.create(review_params)
   end
 
   def destroy
