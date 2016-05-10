@@ -7,9 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div id="login"><%= link_to "Log In", login_path %></div>
 
-<%= yield %>
+<% if logged_in? %>
+  <%= link_to "Log Out", logout_path %>
+<% else %>
+  <%= link_to "Log In", login_path %>
+<% end %>
+
+  <%= yield %>
 
 </body>
 </html>
