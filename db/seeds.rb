@@ -13,3 +13,5 @@ Beer.create(name: 'Kentucky Brunch Brand Stout',    style: 'Imperial Stout', man
 Beer.create(name: 'Pliny The Younger',              style: 'Imperial IPA',   manufacturer: 'Russian River')
 Beer.create(name: 'Heady Topper',                   style: 'Imperial IPA',   manufacturer: 'Russian River')
 
+
+
