@@ -1,8 +1,10 @@
 <h1>This is the BEERS::INDEX view</h1>
 
 <% @beers.each do |b| %>
-  Name:  <%= link_to b.name, beer_path(b) %>
-  Style: <%= b.style %>
-  Manufacturer: <%= b.manufacturer %>
+  <%= link_to b.name, beer_path(b) %>
+  <br>
+  | Style: <%= b.style %>
+  | Manufacturer: <%= b.manufacturer %>
+  <br>
   <br>
 <% end %>

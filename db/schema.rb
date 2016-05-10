@@ -26,4 +26,13 @@ ActiveRecord::Schema.define(version: 20160510141915) do
     t.string "name"
   end
 
+  create_table "reviews", force: :cascade do |t|
+    t.string  "manufacturer"
+    t.string  "name"
+    t.string  "location"
+    t.float   "price"
+    t.integer "rating"
+    t.text    "body"
+    t.integer "beer_id"
+  end
 end
