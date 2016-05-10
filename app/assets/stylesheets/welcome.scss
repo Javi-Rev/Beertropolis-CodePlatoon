@@ -33,4 +33,16 @@ h2 {
   font-family: cursive;
   text-align: center;
   text-shadow: 1px 3px 6px #a3d0b0, 0 0 0 #000, 1px 3px 6px #a3d0b0;
+
+.animated {
+  -webkit-transition: height 0.2s;
+  -moz-transition: height 0.2s;
+  transition: height 0.2s;
+}
+
+.stars
+{
+  margin: 20px 0;
+  font-size: 24px;
+  color: #d17581;
 }

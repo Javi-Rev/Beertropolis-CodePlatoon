@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang ="en">
+
 <% @beer.reviews.each do |r| %>
   <p>
   <strong>Manufacturer:</strong>
@@ -29,4 +32,6 @@
   <%= link_to "Delete my review, I'm drunk.", [review.beer, review],
               method: :delete,
               data: {confirm: 'Are you sure?'} %>
-</p>
+            </p>
+
+          </html>            
