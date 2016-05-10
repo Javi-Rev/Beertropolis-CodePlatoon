@@ -7,9 +7,10 @@ Rails.application.routes.draw do
   root 'beers#index'
 
   get '/auth/twitter', as: 'login'
+  match '/sessions', to: "sessions#destroy", as: 'logout', via: [:delete, :get]
   get '/beers/:id', to: 'beers#show', as: 'beer'
   get 'auth/twitter/callback', to: "sessions#create"
-
+  get 'create', to: "sessions#create"
 
 
   # You can have the root of your site routed with "root"
