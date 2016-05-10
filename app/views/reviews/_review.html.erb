@@ -24,3 +24,9 @@
     <%= r.body %>
   </p>
 <% end %>
+
+<p>
+  <%= link_to "Delete my review, I'm drunk.", [review.beer, review],
+              method: :delete,
+              data: {confirm: 'Are you sure?'} %>
+</p>
