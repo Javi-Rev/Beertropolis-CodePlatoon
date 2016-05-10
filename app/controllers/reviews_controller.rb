@@ -10,7 +10,7 @@ class ReviewsController < ApplicationController
     @review.destroy
   end
 
-  pivate
+  private
     def review_params
       params.require(:review).permit(:manufacturer, :name, :location, :price, :rating, :body)
     end
