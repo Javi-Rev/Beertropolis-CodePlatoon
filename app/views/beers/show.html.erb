@@ -1,6 +1,4 @@
-<!DOCTYPE>
-<html lang="en">
-
+<%= javascript_include_tag params[:controller] %>
 <h1>This is the BEERS:: SHOW  view</h1>
 
 
@@ -15,10 +13,9 @@ Style: <% @beer.style %>
 
 <h2>Would you like to add your own review?</h2>
 
-<%= render 'reviews/review2' %>
+<%= render 'reviews/review' %>
 
 <%= link_to 'Edit', edit_beer_path(@beer) %>
 <%= link_to 'Back', beers_path %>
 
-</html>
 

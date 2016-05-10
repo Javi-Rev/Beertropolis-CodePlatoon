@@ -1,37 +1,34 @@
 <!DOCTYPE html>
 <html lang ="en">
 
-<% @beer.reviews.each do |r| %>
-  <p>
-  <strong>Manufacturer:</strong>
-    <%= r.manufacturer %>
-  </p>
-  <p>
-  <strong>Beer Name:</strong>
-    <%= r.name %>
-  </p>
-  <p>
-  <strong>Price:</strong>
-    <%= r.price %>
-  </p>
-  <p>
-  <strong>Zip Code:</strong>
-    <%= r.location %>
-  </p>
-  <p>
-  <strong>Rating:</strong>
-    <%= r.rating %>
-  </p>
-  <p>
-  <strong>Review Text:</strong>
-    <%= r.body %>
-  </p>
-<% end %>
+<%= javascript_include_tag params[:controller] %>
 
-<p>
-  <%= link_to "Delete my review, I'm drunk.", [review.beer, review],
-              method: :delete,
-              data: {confirm: 'Are you sure?'} %>
-            </p>
+<div class="container">
+  <div class="row" style="margin-top:40px;">
+    <div class="col-md-6">
+    <div class="well well-sm">
+      <div class="text-right">
+        <a class="btn btn-success btn-green" href="#reviews-anchor" id="open-review-box">Leave a Review</a>
+      </div>
 
-          </html>            
+      <div class="row" id="post-review-box" style="display:none;">
+        <div class="col-md-12">
+          <form accept-charset="UTF-8" action="" method="post">
+            <input id="ratings-hidden" name="rating" type="hidden">
+            <textarea class="form-control animated" cols="50" id="new-review" name="comment" placeholder="Enter your review here..." rows="5"></textarea>
+
+            <div class="text-right">
+              <div class="stars starrr" data-rating="0"></div>
+              <a class="btn btn-danger btn-sm" href="#" id="close-review-box" style="display:none; margin-right: 10px;">
+                <span class="glyphicon glyphicon-remove"></span>Cancel</a>
+              <button class="btn btn-success btn-lg" type="submit">Save</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+</html>
