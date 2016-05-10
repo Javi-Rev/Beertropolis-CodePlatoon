@@ -3,6 +3,7 @@ class BeersController < ApplicationController
   def index
     @beers = Beer.all
   end
+
   def show
     @beer = Beer.find(params[:id])
   end
@@ -10,7 +11,7 @@ class BeersController < ApplicationController
   def new
     @beer = Beer.new
   end
-  
+
   def edit
     @beer = Beer.find(params[:id])
   end
@@ -27,7 +28,7 @@ class BeersController < ApplicationController
 
   def update
     @beer = Beer.find(params[:id])
-    
+
     if @beer.update(beer_params)
       redirect_to @beer
     else
