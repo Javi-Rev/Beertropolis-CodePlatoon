@@ -11,8 +11,10 @@
 // about supported directives.
 //
 //= require jquery
-//= require bootstrap-sprockets
 //= require jquery_ujs
+//= require twitter/typeahead
+//= require twitter/typeahead.min
+//= require bootstrap-sprockets
 //= require vue
 //= require_tree .
 
