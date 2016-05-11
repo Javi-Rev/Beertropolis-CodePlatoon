@@ -9,10 +9,9 @@ Style: <% @beer.style %>
 
 <h2>Reviews</h2>
 
-<%= render @beer.reviews %>
+<%= link_to 'See reviews', beer_reviews_path(@beer) %>
 
 <h2>Would you like to add your own review?</h2>
-
 <%= render 'reviews/review' %>
 
 <%= link_to 'Edit', edit_beer_path(@beer) %>
