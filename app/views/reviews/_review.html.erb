@@ -13,7 +13,7 @@
 
       <div class="row" id="post-review-box" style="display:none;">
         <div class="col-md-12">
-          <form accept-charset="UTF-8" action="/beers/:beer_id/reviews" method="post">
+          <form accept-charset="UTF-8" action=<%= "/beers/#{@beer.id}/reviews" %> method="post">
             <input id="ratings-hidden" name="rating" type="hidden">
             <input name="authenticity_token" type="hidden" value="token_value">
             <textarea class="form-control animated" cols="50" id="manufacturer" name ="manufacturer" placeholder="Manufacturer" rows="1"></textarea>
