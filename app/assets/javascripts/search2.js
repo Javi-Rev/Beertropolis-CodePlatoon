@@ -1,19 +1,44 @@
-var gonBeers = gon.Beers
-var onReady = function() {
-  var beers = new Bloodhound ({
-    datumTokenizer: Bloodhound.tokenizers.whitespace,
-    queryTokenizer: Bloodhound.tokenizers.whitespace,
-    prefetch: gonBeers
-  });
+var substringMatcher = function(strs) {
+  return function findMatches(query, cb) {
+    var matches, substringRegex;
 
-  beers.initialize();
+    // an array that will be populated with substring matches
+    matches = [];
 
-  $("#beer-search").typeahead(null, {
-    name: 'name',
-    source: gonBeers
-  }
+    // regex used to determine if a string contains the substring `query`
+    substrRegex = new RegExp(query, 'i');
 
-  $(searchSelector).bind('typeahead:selected', function(event, datum, name){
-    window.location.href = '/search/'+datum.id;
-  });
+    // iterate through the pool of strings and for any string that
+    // contains the substring `query`, add it to the `matches` array
+    $.each(strs, function(i, str) {
+      if (substrRegex.test(str)) {
+        matches.push(str);
+      }
+    });
+
+    cb(matches);
+  };
 };
+
+var states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California',
+  'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii',
+  'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana',
+  'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota',
+  'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire',
+  'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota',
+  'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island',
+  'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont',
+  'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
+];
+
+$(function() {
+  $('#the-basics .typeahead').typeahead({
+    hint: true,
+    highlight: true,
+    minLength: 1
+  },
+  {
+    name: 'states',
+    source: substringMatcher(states)
+  });
+})
