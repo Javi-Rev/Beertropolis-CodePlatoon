@@ -1,6 +1,5 @@
 class SearchController < ApplicationController
-
-  def index
+def index
     @look = ThingSearch.new(search_params)
     @search = search_params.present? ? @look.results : Search.all
   end
