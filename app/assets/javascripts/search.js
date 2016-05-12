@@ -9,7 +9,7 @@ var onReady = function() {
   beers.initialize();
 
   $('#prefetch .typeahead').typeahead(null, {
-      name: 'name'
+      name: 'name',
       source: beers
 });
 

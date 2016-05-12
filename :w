@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
   require 'pp'
 
   def omg
-    # cookies.delete 'latlon'
+    cookies.delete 'latlon'
     @cookies = cookies.to_h
 
     # now probably move these to helper methods in application controller

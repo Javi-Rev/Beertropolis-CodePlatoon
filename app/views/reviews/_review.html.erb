@@ -32,8 +32,39 @@
         </div>
       </div>
     </div>
-
+    </div>
   </div>
 </div>
-</div>
+
+<h2>Was JS run?</h2>
+
+<div id="was-js-run">No</div>
+
+
+<h2>Latitude / Longitude</h2>
+
+<p>(<%= @latitude %>, <%= @longitude %>)</p>
+
+
+
+<h2>Cookies (from server):</h2>
+
+
+<pre><%= @cookies.pretty_inspect %></pre>
+
+<script>
+  // found the regex here: https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie
+  var match = document.cookie.match(/(?:(?:^|.*;\s*)latlon\s*\=\s*([^;]*).*$)|^.*$/);
+  var cookieValue = (match && match[1]);
+  if(cookieValue)
+    console.log("Looks like: " + cookieValue);
+  if(!cookieValue && navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(geoPosition) {
+      var coords  =  geoPosition.coords
+      document.cookie = ("latlon=" + coords.latitude + "|" + coords.longitude);
+      $('#was-js-run').text('YES!').css('background-color', 'green')
+    });
+  }
+
+</script>
 </html>
