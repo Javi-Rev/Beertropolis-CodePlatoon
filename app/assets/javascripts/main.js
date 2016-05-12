@@ -12,4 +12,6 @@
     })
 })();
 
+alert(gon.Beers);
+
 

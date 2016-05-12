@@ -25,6 +25,8 @@ gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'twitter-typeahead-rails'
 gem 'bootstrap-typeahead-rails'
+gem 'gon', '~> 6.0', '>= 6.0.1'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

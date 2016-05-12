@@ -74,6 +74,11 @@ GEM
     execjs (2.6.0)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    gon (6.0.1)
+      actionpack (>= 3.0)
+      json
+      multi_json
+      request_store (>= 1.0)
     hashie (3.4.4)
     i18n (0.7.0)
     interception (0.5)
@@ -151,6 +156,7 @@ GEM
     rake (11.1.2)
     rdoc (4.2.2)
       json (~> 1.4)
+    request_store (1.3.1)
     rouge (1.10.1)
     rspec-core (3.4.4)
       rspec-support (~> 3.4.0)
@@ -210,6 +216,7 @@ DEPENDENCIES
   bootstrap-typeahead-rails
   capybara
   coffee-rails (~> 4.1.0)
+  gon (~> 6.0, >= 6.0.1)
   jbuilder (~> 2.0)
   jquery-rails
   mrspec
