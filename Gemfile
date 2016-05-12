@@ -24,6 +24,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'twitter-typeahead-rails'
+gem 'bootstrap-typeahead-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -38,6 +39,8 @@ group :development, :test do
   gem 'pry'
   gem 'better_errors'
   gem 'capybara'
+  gem 'poltergeist'
+
 end
 
 group :test do
