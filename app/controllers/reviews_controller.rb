@@ -1,4 +1,9 @@
 class ReviewsController < ApplicationController
+
+  def index
+    
+  end
+
   def create
     @beer = Beer.find(params[:beer_id])
     @review = @beer.reviews.create(review_params)
