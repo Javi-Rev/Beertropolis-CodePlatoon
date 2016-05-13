@@ -15,12 +15,13 @@ var substringMatcher = function(strs) {
         matches.push(str);
       }
     });
-
     callback(matches);
   };
 };
 
 var beerData = gon.Beers
+var beerNames = gon.Names
+var path_id
 
 $(function() {
   $('#the-basics .typeahead').typeahead({
@@ -29,10 +30,14 @@ $(function() {
     minLength: 1
   },
   {
-    name: 'beerData',
-    source: substringMatcher(beerData)
-  }).on('typeahead:select', function(event, selection) {
+    source: substringMatcher(beerNames)
+  }).on('typeahead:selected', function(event, selection) {
+    for(var i = 0; i < beerData.length; i++) {
+      if (beerData[i].name === selection) {
+        path_id = beerData[i].id
+      }
+    }
     console.log("selection: ", selection);
-    console.log(beerData.indexOf(selection)+1);
+    window.location = "/beers/" + path_id
   });
 })
