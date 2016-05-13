@@ -1,5 +1,5 @@
 var substringMatcher = function(strs) {
-  return function findMatches(query, cb) {
+  return function findMatches(query, callback) {
     var matches, substringRegex;
 
     // an array that will be populated with substring matches
@@ -15,21 +15,13 @@ var substringMatcher = function(strs) {
         matches.push(str);
       }
     });
-
-    cb(matches);
+    callback(matches);
   };
 };
 
-var states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California',
-  'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii',
-  'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana',
-  'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota',
-  'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire',
-  'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota',
-  'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island',
-  'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont',
-  'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
-];
+var beerData = gon.Beers
+var beerNames = gon.Names
+var path_id
 
 $(function() {
   $('#the-basics .typeahead').typeahead({
@@ -38,7 +30,14 @@ $(function() {
     minLength: 1
   },
   {
-    name: 'states',
-    source: substringMatcher(states)
+    source: substringMatcher(beerNames)
+  }).on('typeahead:selected', function(event, selection) {
+    for(var i = 0; i < beerData.length; i++) {
+      if (beerData[i].name === selection) {
+        path_id = beerData[i].id
+      }
+    }
+    console.log("selection: ", selection);
+    window.location = "/beers/" + path_id
   });
 })
