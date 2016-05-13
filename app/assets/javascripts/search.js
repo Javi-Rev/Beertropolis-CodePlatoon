@@ -33,6 +33,6 @@ $(function() {
     source: substringMatcher(beerData)
   }).on('typeahead:select', function(event, selection) {
     console.log("selection: ", selection);
-    window.location = "/localhost:3000/beers/" + (beerData.indexOf(selection)+1);
+    window.location = "/beers/" + (beerData.indexOf(selection)+1);
   });
 })
