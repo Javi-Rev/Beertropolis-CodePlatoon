@@ -10,10 +10,11 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *= require bootstrap-typeahead-rails
- *= require_tree .
  *= require_self
  */
 
+@import "variables";
+@import "welcome";
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -21,13 +22,21 @@
   font-size: 1em;
 }
 
-h1 {
-  font-color: 90000;
-  font-size: 3em;
-  font-family: cursive;
+h2 {
+  font-color: #900;
+  font-size: 5em;
   text-align: center;
-  text-shadow: 1px 3px 6px #a3d0b0, 0 0 0 #000, 1px 3px 6px #990000;
+  color: #900 !important; // bootstrap sets h2s to inherit
 }
 
+.animated {
+  -webkit-transition: height 0.2s;
+  -moz-transition: height 0.2s;
+  transition: height 0.2s;
+}
 
-
+.stars {
+  margin: 20px 0;
+  font-size: 24px;
+  color: #d17581;
+}
