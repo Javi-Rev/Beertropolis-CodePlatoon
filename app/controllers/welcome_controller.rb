@@ -7,4 +7,5 @@ class WelcomeController < ApplicationController
     end
     gon.Beers = @beerarr
   end
+
 end

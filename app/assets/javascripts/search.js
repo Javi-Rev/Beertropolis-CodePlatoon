@@ -31,5 +31,8 @@ $(function() {
   {
     name: 'beerData',
     source: substringMatcher(beerData)
+  }).on('typeahead:select', function(event, selection) {
+    console.log("selection: ", selection);
+    console.log(beerData.indexOf(selection)+1);
   });
 })
