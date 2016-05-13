@@ -14,16 +14,4 @@ class ApplicationController < ActionController::Base
       @current_user ||= User.find_by(id: session[:user_id])
     end
   end
-
-  require 'pp'
-
-  def omg
-    # cookies.delete 'latlon'
-    @cookies = cookies.to_h
-
-    # now probably move these to helper methods in application controller
-    @latitude, @longitude =
-      cookies['latlon'].to_s.split('|')
-      .map(&:to_f)
-  end
 end

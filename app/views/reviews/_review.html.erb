@@ -21,6 +21,7 @@
             <textarea class="form-control animated" cols="50" id="price" name="price" placeholder="Price" rows="1"></textarea>
             <textarea class="form-control animated" cols="50" id="location" name="location" placeholder="Enter your location" rows="1"></textarea>
             <textarea class="form-control animated" cols="50" id="body" name="body" placeholder="Enter your review here..." rows="5"></textarea>
+            <input id="latlong" name="latlong" type="hidden">
 
             <div class="text-right">
               <div class="stars starrr" data-rating="0"></div>
@@ -57,14 +58,15 @@
   var match = document.cookie.match(/(?:(?:^|.*;\s*)latlon\s*\=\s*([^;]*).*$)|^.*$/);
   var cookieValue = (match && match[1]);
   if(cookieValue)
+    $("#latlong").val(cookieValue)
     console.log("Looks like: " + cookieValue);
   if(!cookieValue && navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(geoPosition) {
       var coords  =  geoPosition.coords
+      console.log(coords)
       document.cookie = ("latlon=" + coords.latitude + "|" + coords.longitude);
       $('#was-js-run').text('YES!').css('background-color', 'green')
     });
   }
-
 </script>
 </html>
