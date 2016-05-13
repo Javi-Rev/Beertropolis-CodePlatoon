@@ -19,7 +19,7 @@ Capybara.register_driver :poltergeist do |app|
   Capybara::Poltergeist::Driver.new(app, phantomjs: Phantomjs.path)
 end
 
-Capybara.current_driver = :poltergeist
+# Capybara.current_driver = :poltergeist
 
 class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.

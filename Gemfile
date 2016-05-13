@@ -41,12 +41,12 @@ group :development, :test do
   gem 'pry'
   gem 'better_errors'
   gem 'capybara'
-  gem 'poltergeist'
-
 end
 
 group :test do
   gem 'mrspec'
+  gem 'poltergeist'
+  gem 'phantomjs', :require => 'phantomjs/poltergeist'
 end
 
 group :development do

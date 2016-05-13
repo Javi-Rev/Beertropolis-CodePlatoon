@@ -1,7 +1,7 @@
 class ReviewsController < ApplicationController
 
   def index
-    
+
   end
 
   def create
@@ -24,6 +24,6 @@ class ReviewsController < ApplicationController
 
   private
     def review_params
-      params.permit(:beer_id, :manufacturer, :name, :location, :price, :rating, :body)
+      params.permit(:beer_id, :manufacturer, :name, :location, :price, :rating, :body, :latlong)
     end
 end
