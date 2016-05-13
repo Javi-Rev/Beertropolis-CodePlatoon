@@ -33,7 +33,7 @@ $(function(){
         openReviewBtn.fadeIn(200);
       });
     closeReviewBtn.hide();
-    
+
   });
 
   $('.starrr').on('starrr:change', function(e, value){

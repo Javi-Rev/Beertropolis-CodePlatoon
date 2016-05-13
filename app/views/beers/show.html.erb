@@ -9,7 +9,15 @@ Style: <% @beer.style %>
 
 <h2>Reviews</h2>
 
-<%= link_to 'See reviews', beer_reviews_path(@beer) %>
+<% @beer.reviews.each do |r| %>
+  | Manufacturer: <%= r.manufacturer %>
+  | Beer Name: <%= r.name %>
+  | Review: <%= r.rating %>
+<br>
+  | Body: <%= r.body %>
+<br>
+<br>
+<% end %>
 
 <h2>Would you like to add your own review?</h2>
 <%= render 'reviews/review' %>
