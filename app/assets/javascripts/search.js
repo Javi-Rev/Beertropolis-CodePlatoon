@@ -37,7 +37,6 @@ $(function() {
         path_id = beerData[i].id
       }
     }
-    console.log("selection: ", selection);
     window.location = "/beers/" + path_id
   });
 })
