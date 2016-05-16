@@ -6,6 +6,11 @@ class BeersController < ApplicationController
 
   def show
     @beer = Beer.find(params[:id])
+    @reviews = @beer.reviews
+
+    gon.latLong = @reviews.map do |review|
+      {latitude: review.latitude, longitude: review.longitude}
+    end
   end
 
   def new

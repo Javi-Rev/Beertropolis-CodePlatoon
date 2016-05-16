@@ -14,7 +14,7 @@
 # Beer.create(name: 'Heady Topper',                   style: 'Imperial IPA',   manufacturer: 'Russian River')
 require 'faker'
 
-@beers = 50
+@beers = 69
 @reviews_per_beer = 100
 
 @beers.times do |c|
@@ -35,7 +35,9 @@ while @i <= 50 do
       location: Faker::Address.postcode,
       price: Faker::Number.between(10, 150),
       rating: Faker::Number.between(1, 5),
-      body: Faker::Lorem.paragraph(3, true, 3)
+      body: Faker::Lorem.paragraph(3, true, 3),
+      latitude: Faker::Address.latitude,
+      longitude: Faker::Address.longitude,
     )
   end
   @i += 1
