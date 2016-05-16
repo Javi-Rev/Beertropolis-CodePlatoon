@@ -3,11 +3,13 @@ class Reviews < ActiveRecord::Migration
     create_table :reviews do |t|
       t.string  :manufacturer
       t.string  :name
-      t.string  :location
+      t.string  :location #not in use currently, planned for potential feature !FLAG
       t.float   :price
       t.integer :rating
       t.text    :body
       t.integer :beer_id
+      t.float   :latitude
+      t.float   :longitude
     end
   end
 end
