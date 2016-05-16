@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <%= include_gon(:init => true) %>
-  <title>Beertropolis</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <%= include_gon(:init => true) %>
+    <title>Beertropolis</title>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="mainbackground">
+      <img src="BeertropolisBWIndex.jpg">
+    </div>
 
-  <% if logged_in? %>
-    <%= link_to "Log Out", logout_path %>
-  <% else %>
-    <%= link_to "Log In", login_path %>
-  <% end %>
+    <% if logged_in? %>
+      <%= link_to "Log Out", logout_path %>
+    <% else %>
+      <%= link_to "Log In", login_path %>
+    <% end %>
 
-  <%= yield %>
+    <%= yield %>
 
-</body>
+  </body>
 </html>
