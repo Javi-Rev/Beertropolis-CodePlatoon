@@ -1,20 +1,31 @@
-<%= javascript_include_tag params[:controller] %>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFVHHySuYJJCeAQcJp-WTmQeZwy12Z_2E&libraries=visualization&callback=initMap">
+</script>
+<%= javascript_include_tag "show.js" %>
+
 <h1>This is the BEERS:: SHOW  view</h1>
+
+<div id="floating-panel">
+	<button onclick="toggleHeatmap()">Toggle Heatmap</button>
+	<button onclick="changeGradient()">Change gradient</button>
+	<button onclick="changeRadius()">Change radius</button>
+	<button onclick="changeOpacity()">Change opacity</button>
+</div>
+<div id="map"></div>
 
 
 Name: <%= @beer.name %>
 <br>
 Style: <% @beer.style %>
 
-
 <h2>Reviews</h2>
 
 <% @beer.reviews.each do |r| %>
-  | Manufacturer: <%= r.manufacturer %>
-  | Beer Name: <%= r.name %>
-  | Review: <%= r.rating %>
+	| Manufacturer: <%= r.manufacturer %>
+| Beer Name: <%= r.name %>
+	| Review: <%= r.rating %>
 <br>
-  | Body: <%= r.body %>
+| Body: <%= r.body %>
 <br>
 <br>
 <% end %>
