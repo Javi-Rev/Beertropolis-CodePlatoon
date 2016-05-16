@@ -9,10 +9,17 @@ require 'rspec/rails'
 # Add additional requires below this line. Rails is not loaded until this point!
 require 'capybara/rails'
 require 'capybara/poltergeist'
+# do we need to do this after every test?
+# Capybara.reset_sessions!
+Capybara.register_driver :poltergeist do |app|
+  Capybara::Poltergeist::Driver.new(app, phantomjs: Phantomjs.path)
+end
 Capybara.javascript_driver = :poltergeist
 
 require 'database_cleaner'
 DatabaseCleaner.strategy = :truncation
+
+OmniAuth.config.test_mode = true
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
