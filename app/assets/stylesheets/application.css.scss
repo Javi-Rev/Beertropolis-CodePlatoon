@@ -18,6 +18,20 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.mainbackground {
+  position: relative;
+}
+
+.mainbackground img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: auto;
+  height: 100vw;
+  opacity: 0.3;
+  z-index: -2;
+}
+
 #login {
   font-size: 1em;
 }
