@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class AuthenticationTest < ActionDispatch::IntegrationTest
+Rspec.describe AuthenticationTest < ActionDispatch::IntegrationTest
   def mock_authentication name, uid
     OmniAuth.config.mock_auth[:twitter] = OmniAuth::AuthHash.new({
       'provider'    => 'twitter',
@@ -20,22 +20,22 @@ class AuthenticationTest < ActionDispatch::IntegrationTest
     assert page.has_content?('Log In')
   end
 
-  def test_users_can_sign_in_with_twitter
+  example 'test_users_can_sign_in_with_twitter' do
     name = 'Boo'
     uid  = '1234'
     mock_authentication name, uid
 
     page.visit root_path
     user_is_signed_out
-    assert_equal 0, User.count
+    expect(User.count) to equal 0
 
     page.click_on 'Log In'
 
-    assert_equal 1, User.count
+    expect(User.count) to equal 1
     user_is_signed_in
     user = User.first
-    assert_equal name, user.name
-    assert_equal uid, user.uid
+    expect(user.name) to equal name
+    expect(user.uid) to equal uid
 
     page.click_on('Log Out')
     user_is_signed_out
