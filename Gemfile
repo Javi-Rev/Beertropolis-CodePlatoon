@@ -48,6 +48,9 @@ group :test do
   gem 'mrspec'
   gem 'poltergeist'
   gem 'phantomjs', :require => 'phantomjs/poltergeist'
+  gem 'rspec-rails'
+  gem 'rspec'
+  gem 'database_cleaner'
 end
 
 group :development do
