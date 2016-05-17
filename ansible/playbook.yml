@@ -7,12 +7,12 @@
   roles:
     - ruby
 
-    - name: Install Rails Application
-      hosts: all
-      remote_user: ec2-user
-      sudo: no
-      roles:
-        - app
-      environment:
-        PATH: "/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/aws/bin:/home/ec2-user/.local/bin:/home/ec2-user/bin"
-        FAVORITE_NUMBER: twelve
+- name: Install Rails Application
+  hosts: all
+  remote_user: ec2-user
+  sudo: no
+  roles:
+    - app
+  environment:
+    PATH: "/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/aws/bin:/home/ec2-user/.local/bin:/home/ec2-user/bin"
+    FAVORITE_NUMBER: twelve
