@@ -9,15 +9,15 @@
   </head>
   <body>
     <ul>
-      <li><a href="login">Login</a></li>
-      <li><a href="home">Home</a></li>
+      <li><a href="/auth/twitter">Login</a></li>
+      <li><a href="/">Home</a></li>
       <li style="align:center"><a href="logo"><img src="logo.jpg"></a></li>
-      <li style="float:right"><a href="beersshow">Beers</a></li>
+      <li style="float:right"><a href="/beers">Beers</a></li>
       <li style="float:right"><a href="about">About Us</a></li>
     </ul>
 
     <div class="mainbackground">
-      <%= image_tag "BeertropolisBWIndex.jpg" %>
+      <img src="assets/BeertropolisBWIndex.jpg">
     </div>
 
     <% if logged_in? %>
