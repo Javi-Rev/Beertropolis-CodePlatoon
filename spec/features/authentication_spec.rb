@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'spec_helper'
 
 def mock_authentication name, uid
   OmniAuth.config.mock_auth[:twitter] = OmniAuth::AuthHash.new({
@@ -19,10 +20,11 @@ def assert_signed_out
   assert page.has_content?('Log In')
 end
 
-feature "User authentication" do
+RSpec.describe "User authentication", :type => :feature do
   let(:name) {'Boo'}
   let(:uid) {'1234'}
 
+  
   scenario "User is not signed in" do
     visit root_path
     assert_signed_out
