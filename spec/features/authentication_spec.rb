@@ -24,6 +24,7 @@ RSpec.describe "User authentication", :type => :feature do
   let(:name) {'Boo'}
   let(:uid) {'1234'}
 
+  
   scenario "User is not signed in" do
     visit root_path
     assert_signed_out

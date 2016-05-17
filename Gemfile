@@ -42,6 +42,7 @@ group :development, :test do
   gem 'pry'
   gem 'better_errors'
   gem 'capybara'
+  gem 'dotenv-rails'
 end
 
 group :test do
