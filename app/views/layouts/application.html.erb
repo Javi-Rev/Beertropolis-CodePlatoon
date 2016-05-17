@@ -8,6 +8,14 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
+    <ul>
+      <li><a href="login">Login</a></li>
+      <li><a href="home">Home</a></li>
+      <li style="align:center"><a href="logo"><img src="logo.jpg"></a></li>
+      <li style="float:right"><a href="beersshow">Beers</a></li>
+      <li style="float:right"><a href="about">About Us</a></li>
+    </ul>
+
     <div class="mainbackground">
       <img src="assets/BeertropolisBWIndex.jpg">
     </div>
@@ -19,6 +27,10 @@
     <% end %>
 
     <%= yield %>
-
+  <footer>
+    <p style="float:right">Copyright: Beertropolis 2016</p>
+    <p style="float:right">Contact Us! <a href="mailto:someone@example.com">JMMS@beertropolis.com</a></p>
+    <p style="float:right">Created by: Javi, Matthew, and Megan   </p>
+    </footer>
   </body>
 </html>

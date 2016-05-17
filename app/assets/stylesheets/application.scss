@@ -62,3 +62,42 @@ h2 {
   font-size: 24px;
   color: #d17581;
 }
+
+ul {
+  list-style-type: none;
+  position: fixed;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #e55643;
+  box-shadow: 5px 5px 2px #732626
+}
+
+li {
+  float: left;
+}
+
+a {
+  display: block;
+  padding: 8px;
+  color: #732626;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #4d3333;
+}
+.header {
+  top: 0;
+}
+
+footer {
+  background-color: #e55643;
+  display: block;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
