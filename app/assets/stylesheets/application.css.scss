@@ -13,10 +13,10 @@
  *= require_self
  */
 
+@import "bootstrap-sprockets";
 @import "bootstrap";
 @import "variables";
 @import "welcome";
-@import "bootstrap-sprockets";
 @import "show";
 
 html, body {
