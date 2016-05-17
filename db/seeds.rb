@@ -14,8 +14,8 @@
 # Beer.create(name: 'Heady Topper',                   style: 'Imperial IPA',   manufacturer: 'Russian River')
 require 'faker'
 
-@beers = 69
-@reviews_per_beer = 100
+@beers = 100
+@reviews_per_beer = 200
 
 @beers.times do |c|
   Beer.create(
