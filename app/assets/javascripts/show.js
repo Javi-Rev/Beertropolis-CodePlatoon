@@ -64,11 +64,13 @@ function drawChart() {
 }
 
 var newArr = [];
-for ( i = 0; i < gon.reviewDates.length; ++i) {
-   newArr.push(new Date(gon.reviewDates[i].slice(0,4),
-         gon.reviewDates[i].slice(5,7),
-         gon.reviewDates[i].slice(8,10))
-       );
+if (gon.reviewDates !== undefined) {
+  for ( i = 0; i < gon.reviewDates.length; ++i) {
+    newArr.push(new Date(gon.reviewDates[i].slice(0,4),
+          gon.reviewDates[i].slice(5,7),
+          gon.reviewDates[i].slice(8,10))
+        );
+  };
 };
 
 

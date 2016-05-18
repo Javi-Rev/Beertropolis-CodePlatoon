@@ -11,12 +11,11 @@
     <ul>
       <li>
         <% if logged_in? %>
-          <% link_to "Log Out", logout_path %>
+          <%= link_to "Log Out", logout_path %>
         <% else %>
           <%= link_to "Log In", login_path %>
         <% end %>
       </li>
-      <li><a href="/auth/twitter">Login</a></li>
       <li><a href="/">Home</a></li>
       <li style="align:center"><a href="logo"></a></li>
       <li style="float:right"><a href="/beers">Beers</a></li>
