@@ -54,25 +54,9 @@ function changeOpacity() {
 
 // Heatmap data: 500 Points
 function getPoints() {
-  var latLongArr = [];
-  for (var i = 0; i < gon.latLong.length; ++i) {
-    latLongArr.push(
-      new google.maps.LatLng(gon.latLong[i].latitude, gon.latLong[i].longitude)
-      );
-  }
-  return latLongArr;
-  // return [
-  //   new google.maps.LatLng(37.758910, -122.406228),
-    // new google.maps.LatLng(37.758182, -122.405695),
-    // new google.maps.LatLng(37.757676, -122.405118),
-    // new google.maps.LatLng(37.757039, -122.404346),
-    // new google.maps.LatLng(37.756335, -122.403719),
-    // new google.maps.LatLng(37.755503, -122.403406),
-    // new google.maps.LatLng(37.754665, -122.403242),
-    // new google.maps.LatLng(37.753837, -122.403172),
-    // new google.maps.LatLng(37.752986, -122.403112),
-    // new google.maps.LatLng(37.751266, -122.403355)
-      // ];
+  return gon.latLong.map(function(ll) {
+    return new google.maps.LatLng(ll.latitude, ll.longitude)
+  });
 }
 
 
