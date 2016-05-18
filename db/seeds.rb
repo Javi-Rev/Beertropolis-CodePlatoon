@@ -14,32 +14,36 @@
 # Beer.create(name: 'Heady Topper',                   style: 'Imperial IPA',   manufacturer: 'Russian River')
 require 'faker'
 
-@beers = 100
-@reviews_per_beer = 200
+beers = 10
+reviews_per_beer = 30
+end_date = '5/1/2016'
+start_date = '1/1/2015'
 
-@beers.times do |c|
-  Beer.create(
-    name: Faker::Beer.name,
-    style: Faker::Beer.style,
-    manufacturer: Faker::Company.name
-  )
-end
+Beer.transaction do
+  beers.times do |c|
+    Beer.create! do |beer|
+      beer.name = Faker::Beer.name
+      beer.style = Faker::Beer.style
+      beer.manufacturer = Faker::Company.name
 
-@i = 0
-while @i <= 50 do
-  @reviews_per_beer.times do
-    Review.create(
-      beer_id: @i,
-      manufacturer: Faker::Company.name,
-      name: Faker::Beer.name,
-      location: Faker::Address.postcode,
-      price: Faker::Number.between(10, 150),
-      rating: Faker::Number.between(1, 5),
-      body: Faker::Lorem.paragraph(3, true, 3),
-      latitude: Faker::Address.latitude,
-      longitude: Faker::Address.longitude,
-    )
+      review_graph_offset = rand * 2*Math::PI
+      review_oscilations  = rand*2.25 + 0.75 # 0.75-3.0
+
+      reviews_per_beer.times do |review_count|
+        review_percentage = 1.0*review_count/reviews_per_beer
+        price_fluctuation = review_graph_offset + review_oscilations*review_percentage * 2*Math::PI
+
+        beer.reviews.build manufacturer: Faker::Company.name,
+                           name:         Faker::Beer.name,
+                           # review_date: Faker::Date.between(1.year.ago, Date.today),
+                           location:     Faker::Address.postcode,
+                           price:        Math.sin(price_fluctuation)*65+85 + rand*50-25,
+                           rating:       Faker::Number.between(1, 5),
+                           body:         Faker::Lorem.paragraph(3, true, 3),
+                           latitude:     41.8869934 + (rand*0.2 - 0.1),
+                           longitude:    -87.63298569999999 - (rand*0.2),
+                           review_date:  (365*review_percentage).to_i.days.ago
+      end
+    end
   end
-  @i += 1
 end
-

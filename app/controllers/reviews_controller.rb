@@ -24,6 +24,6 @@ class ReviewsController < ApplicationController
 
   private
     def review_params
-      params.permit(:beer_id, :manufacturer, :name, :location, :price, :rating, :body, :latitude, :longitude)
+      params.permit(:beer_id, :manufacturer, :name, :location, :price, :rating, :body, :latitude, :longitude, :review_date)
     end
 end

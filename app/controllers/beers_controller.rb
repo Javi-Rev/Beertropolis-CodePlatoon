@@ -6,11 +6,14 @@ class BeersController < ApplicationController
 
   def show
     @beer = Beer.find(params[:id])
-    @reviews = @beer.reviews
+    @reviews = @beer.reviews.order(:review_date)
 
     gon.latLong = @reviews.map do |review|
       {latitude: review.latitude, longitude: review.longitude}
     end
+
+    gon.reviewDates = @reviews.pluck(:review_date)
+    gon.reviewPrices = @reviews.pluck(:price)
   end
 
   def new
