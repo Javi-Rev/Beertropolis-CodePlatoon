@@ -9,6 +9,13 @@
   </head>
   <body>
     <ul>
+      <li>
+        <% if logged_in? %>
+          <% link_to "Log Out", logout_path %>
+        <% else %>
+          <%= link_to "Log In", login_path %>
+        <% end %>
+      </li>
       <li><a href="/auth/twitter">Login</a></li>
       <li><a href="/">Home</a></li>
       <li style="align:center"><a href="logo"></a></li>
@@ -16,21 +23,11 @@
       <li style="float:right"><a href="about">About Us</a></li>
     </ul>
 
-    <div class="mainbackground">
-      <%= image_tag("BeertropolisBWIndex.jpg") %>
-    </div>
-
-    <% if logged_in? %>
-      <%= link_to "Log Out", logout_path %>
-    <% else %>
-      <%= link_to "Log In", login_path %>
-    <% end %>
-
     <%= yield %>
-  <footer>
-    <p style="float:right">Copyright: Beertropolis 2016</p>
-    <p style="float:right">Contact Us! <a href="mailto:someone@example.com">JMMS@beertropolis.com</a></p>
-    <p style="float:right">Created by: Javi, Matthew, Megan and Sean   </p>
+    <footer>
+      <p style="float:right">Copyright: Beertropolis 2016</p>
+      <p style="float:right">Contact Us! <a href="mailto:someone@example.com">JMMS@beertropolis.com</a></p>
+      <p style="float:right">Created by: Javi, Matthew, Megan and Sean   </p>
     </footer>
   </body>
 </html>
