@@ -15,4 +15,6 @@
     - app
   environment:
     PATH: "/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/aws/bin:/home/ec2-user/.local/bin:/home/ec2-user/bin"
-    FAVORITE_NUMBER: twelve
+    TWITTER_CONSUMER_KEY: "{{ lookup('env', 'TWITTER_CONSUMER_KEY') }}"
+    TWITTER_CONSUMER_SECRET: "{{ lookup('env', 'TWITTER_CONSUMER_SECRET') }}"
+    SECRET_KEY_BASE: "{{ lookup('env', 'SECRET_KEY_BASE') }}"
