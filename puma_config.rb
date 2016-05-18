@@ -30,4 +30,4 @@ stdout_redirect(stdout_logfile, stderr_logfile, append_to_files)
 
 # Serve on a socket so we don't need root access
 # bind 'unix:///tmp/octo.sock'
-bind 'tcp://0.0.0.0:3000'
+bind 'tcp://0.0.0.0:80'
