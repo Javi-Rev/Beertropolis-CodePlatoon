@@ -26,20 +26,6 @@ html, body {
   padding: 0;
 }
 
-.mainbackground {
-  position: relative;
-}
-
-.mainbackground img {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: auto;
-  height: 100vw;
-  opacity: 0.3;
-  z-index: -2;
-}
-
 #login {
   font-size: 1em;
 }
@@ -112,14 +98,6 @@ html, body {
   85%,97% {transform:translateY(-25%);}
 }
 
-  .logofull {
-    position: relative;
-    left:-20%;
-    width: 40vw;
-    height:auto;
-    z-index: 1;
-  }
-
   .banner {
     font-size: 100px;
     font-family: 'Fjalla One', sans-serif;
@@ -153,7 +131,8 @@ ul {
   padding: 0;
   overflow: hidden;
   background-color: #e55643;
-  box-shadow: 5px 5px 2px #732626
+  box-shadow: 5px 5px 2px #732626;
+  z-index: 2;
 }
 
 li {

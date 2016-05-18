@@ -15,7 +15,7 @@
 require 'faker'
 
 beers = 10
-reviews_per_beer = 30
+reviews_per_beer = 50
 end_date = '5/1/2016'
 start_date = '1/1/2015'
 
@@ -36,13 +36,13 @@ Beer.transaction do
         beer.reviews.build manufacturer: Faker::Company.name,
                            name:         Faker::Beer.name,
                            # review_date: Faker::Date.between(1.year.ago, Date.today),
-                           location:     Faker::Address.postcode,
+                           # location:     Faker::Address.postcode,
                            price:        Math.sin(price_fluctuation)*65+85 + rand*50-25,
                            rating:       Faker::Number.between(1, 5),
                            body:         Faker::Lorem.paragraph(3, true, 3),
                            latitude:     41.8869934 + (rand*0.2 - 0.1),
                            longitude:    -87.63298569999999 - (rand*0.2),
-                           review_date:  (365*review_percentage).to_i.days.ago
+                           created_at:  (365*review_percentage).to_i.days.ago
       end
     end
   end

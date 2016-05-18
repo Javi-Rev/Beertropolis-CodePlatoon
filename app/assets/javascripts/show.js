@@ -2,9 +2,9 @@ var map, heatmap;
 
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 15,
+    zoom: 12,
     center: {lat: 41.878, lng: -87.630},
-    mapTypeId: google.maps.MapTypeId.SATELLITE
+    mapTypeId: google.maps.MapTypeId.MAP
   });
 
   if(navigator.geolocation) {
@@ -67,7 +67,7 @@ var newArr = [];
 for ( i = 0; i < gon.reviewDates.length; ++i) {
    newArr.push(new Date(gon.reviewDates[i].slice(0,4),
          gon.reviewDates[i].slice(5,7),
-         gon.reviewDates[i].slice(8,11))
+         gon.reviewDates[i].slice(8,10))
        );
 };
 
