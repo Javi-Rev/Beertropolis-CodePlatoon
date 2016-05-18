@@ -10,6 +10,7 @@ class Reviews < ActiveRecord::Migration
       t.integer :beer_id
       t.float   :latitude
       t.float   :longitude
+      t.date    :review_date
     end
   end
 end
