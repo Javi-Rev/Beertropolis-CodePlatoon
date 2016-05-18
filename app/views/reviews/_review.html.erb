@@ -18,6 +18,7 @@
             <input name="authenticity_token" type="hidden" value="token_value">
             <textarea class="form-control animated" cols="50" id="manufacturer" name ="manufacturer" placeholder="Manufacturer" rows="1"></textarea>
             <textarea class="form-control animated" cols="50" id="name" name="name" placeholder="Beer name" rows="1"></textarea>
+            <textarea class="form-control animated" cols="50" id="review date" name="review date" placeholder="Review date" rows="1"></textarea>
             <textarea class="form-control animated" cols="50" id="price" name="price" placeholder="Price" rows="1"></textarea>
             <textarea class="form-control animated" cols="50" id="location" name="location" placeholder="Enter your location" rows="1"></textarea>
             <textarea class="form-control animated" cols="50" id="body" name="body" placeholder="Enter your review here..." rows="5"></textarea>
@@ -38,36 +39,22 @@
   </div>
 </div>
 
-<h2>Was JS run?</h2>
-
-<div id="was-js-run">No</div>
-
-
-<h2>Latitude / Longitude</h2>
-
-<p>(<%= @latitude %>, <%= @longitude %>)</p>
-
-
-
-<h2>Cookies (from server):</h2>
-
-
-<pre><%= @cookies.pretty_inspect %></pre>
-
 <script>
   // found the regex here: https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie
-  var match = document.cookie.match(/(?:(?:^|.*;\s*)latlon\s*\=\s*([^;]*).*$)|^.*$/);
-  var cookieValue = (match && match[1]);
-  if(cookieValue)
-    document.getElementById('latitude').value = cookieValue.split("|")[0]
-    document.getElementById('longitude').value = cookieValue.split("|")[1]
+  <%# var match = document.cookie.match(/(?:(?:^|.*;\s*)latlon\s*\=\s*([^;]*).*$)|^.*$/); %>
+  <%# var cookieValue = (match && match[1]); %>
+  <%# if(cookieValue) %>
+  <%#   debugger %>
+  <%#   document.getElementById('latitude').value = cookieValue.split("|")[0] %>
+  <%#   document.getElementById('longitude').value = cookieValue.split("|")[1] %>
+
   <%# if(!cookieValue && navigator.geolocation) { %>
-    <%# navigator.geolocation.getCurrentPosition(function(geoPosition) { %>
-      <%# var coords  =  geoPosition.coords %>
-      <%# console.log(coords) %>
-      <%# document.cookie = ("latlon=" + coords.latitude + "|" + coords.longitude); %>
-      <%# $('#was-js-run').text('YES!').css('background-color', 'green') %>
-    <%# }); %>
+    navigator.geolocation.getCurrentPosition(function(geoPosition) {
+      var coords  =  geoPosition.coords
+      console.log(coords)
+      document.getElementById('latitude').value = coords.latitude;
+      document.getElementById('longitude').value = coords.longitude;
+    });
   <%# } %>
 </script>
 </html>
