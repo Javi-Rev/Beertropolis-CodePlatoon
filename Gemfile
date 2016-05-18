@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+# We need this for our production environment http://stackoverflow.com/a/22987642/6200880
+gem 'multi_json', '1.7.8'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'

@@ -112,7 +112,7 @@ GEM
       minitest (~> 5.0)
       rspec-core (~> 3.2)
       what_weve_got_here_is_an_error_to_communicate (~> 0.0.8)
-    multi_json (1.12.0)
+    multi_json (1.7.8)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     oauth (0.5.1)
@@ -250,6 +250,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   mrspec
+  multi_json (= 1.7.8)
   omniauth
   omniauth-twitter
   phantomjs
@@ -267,4 +268,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.11.2
+   1.12.4
