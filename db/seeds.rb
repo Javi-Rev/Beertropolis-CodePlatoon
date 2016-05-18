@@ -14,10 +14,12 @@
 # Beer.create(name: 'Heady Topper',                   style: 'Imperial IPA',   manufacturer: 'Russian River')
 require 'faker'
 
-@beers = 100
-@reviews_per_beer = 200
+beers = 100
+reviews_per_beer = 200
+end_date = '5/1/2016'
+start_date = '1/1/2015'
 
-@beers.times do |c|
+beers.times do |c|
   Beer.create(
     name: Faker::Beer.name,
     style: Faker::Beer.style,
@@ -25,21 +27,23 @@ require 'faker'
   )
 end
 
-@i = 0
-while @i <= 50 do
-  @reviews_per_beer.times do
+i = 0
+while i <= 50 do
+  reviews_per_beer.times do
     Review.create(
-      beer_id: @i,
+      beer_id: i,
       manufacturer: Faker::Company.name,
       name: Faker::Beer.name,
+      # review_date: Faker::Date.between(1.year.ago, Date.today),
       location: Faker::Address.postcode,
       price: Faker::Number.between(10, 150),
       rating: Faker::Number.between(1, 5),
       body: Faker::Lorem.paragraph(3, true, 3),
       latitude: Faker::Address.latitude,
       longitude: Faker::Address.longitude,
+      review_date: rand(1.year.ago..Time.now),
     )
   end
-  @i += 1
+  i += 1
 end
 

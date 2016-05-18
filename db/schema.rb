@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20160510141915) do
     t.integer "beer_id"
     t.float   "latitude"
     t.float   "longitude"
+    t.date    "review_date"
   end
 
   create_table "users", force: :cascade do |t|
