@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<svg width="457px" height="457px" viewBox="0 0 457 457" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>Beertropolis</title>
+
+  <style type="text/css"><![CDATA[
+
+    #B {
+      font-family: "Helvetica";
+      font-weight: normal;
+      fill:        #000;
+      font-weight: bold;
+      font-style: italic;
+    }
+    .border {
+      stroke:       #000;
+      fill:         #E55643;
+      stroke-width: 35px;
+    }
+    #spaceShip {
+      fill:      black;
+      transform: translate(60px, 190px)  rotate(-20.000000deg);
+    }
+    #spotlight {
+      fill: none;
+    }
+    #spaceShip:hover + #spotlight {
+      fill: #E96;
+      animation: spotlightanimation 2s infinite;
+    }
+    @keyframes spotlightanimation {
+      0%, 100% { fill: #E96; }
+      50%      { fill: #E94; }
+    }
+    #skyline rect,
+    #skyline path {
+      fill:         #000;
+      stroke:       #000;
+      stroke-width: 2px;
+    }
+    #skyline #rotunda * {
+      fill:         black;
+      stroke:       black;
+      stroke-width: 2px;
+    }
+  ]]></style>
+
+  <circle class="border" cx="228.5" cy="228.5" r="210.5"></circle>
+
+  <text id="B" font-size="240">
+    <tspan x="170" y="213">B</tspan>
+  </text>
+
+  <path
+    id="spaceShip"
+    d="m 0      0
+       c 4.803  0.976  9.481   3.181 9.481 3.181
+       c 0      0      -9.012  3.637 -13.5 3.637
+       c -4.512 0      -13.5  -3.637 -13.5 -3.637
+       c 0      0      4.679  -2.205 9.481 -3.181
+       c 0.249  -1.794 1.954  -3.182 4.019 -3.182
+       c 2.066  0      3.77   1.388  4.019 3.182
+       z"
+    >
+  </path>
+  <path
+    id="spotlight"
+    d="m 60  200
+       L 97  306
+       L 115 306
+       z"
+    >
+  </path>
+
+  <g id="skyline">
+    <rect x="386" y="261" width="27" height="80"></rect>
+    <rect x="239" y="240" width="10" height="139"></rect>
+    <rect x="254" y="254" width="10" height="139"></rect>
+    <rect x="271" y="267" width="10" height="139"></rect>
+    <rect x="193" y="266" width="20" height="139"></rect>
+    <rect x="244" y="307" width="10" height="137"></rect>
+    <rect x="259" y="288" width="27" height="59"></rect>
+    <rect x="143" y="205" width="20" height="139"></rect>
+    <rect x="172" y="162" width="20" height="139"></rect>
+    <rect x="305" y="224" width="17" height="139"></rect>
+    <rect x="319" y="214" width="1"  height="52"></rect>
+    <rect x="292" y="283" width="27" height="75"></rect>
+    <rect x="413" y="240" width="17" height="80"></rect>
+    <rect x="351" y="269" width="27" height="80"></rect>
+    <rect x="331" y="247" width="27" height="92"></rect>
+    <rect x="336" y="231" width="17" height="80"></rect>
+    <rect x="169" y="288" width="48" height="80"></rect>
+    <rect x="76"  y="275" width="17" height="52"></rect>
+    <rect x="131" y="235" width="17" height="80"></rect>
+    <rect x="143" y="294" width="48" height="59"></rect>
+    <rect x="54"  y="293" width="17" height="59"></rect>
+    <rect x="369" y="231" width="17" height="139"></rect>
+    <rect x="314" y="214" width="1"  height="52"></rect>
+    <rect x="148" y="188" width="1"  height="52"></rect>
+    <rect x="177" y="160" width="10" height="52"></rect>
+    <rect x="56"  y="289" width="1"  height="52"></rect>
+    <rect x="119" y="302" width="17" height="52"></rect>
+    <rect x="192" y="240" width="4"  height="29"></rect>
+    <rect x="214" y="280" width="1"  height="52"></rect>
+    <rect x="225" y="290" width="1"  height="52"></rect>
+    <rect x="230" y="280" width="1"  height="52"></rect>
+    <rect x="235" y="260" width="1"  height="52"></rect>
+    <rect x="200" y="290" width="40" height="1"></rect>
+    <g id="rotunda">
+      <path
+        class="dome"
+        fill="#000000"
+        d="M 96  291
+           C 96  291 96  301 106 301
+           C 116 301 116 291 116 291
+           L 96  291
+           Z"
+           transform="translate(106.000000, 296.000000) rotate(-180.000000) translate(-106.000000, -296.000000)"
+        >
+      </path>
+      <rect fill="blue" x="98"  y="300" width="1"  height="52"></rect>
+      <rect x="103" y="300" width="1"  height="52"></rect>
+      <rect x="108" y="300" width="1"  height="52"></rect>
+      <rect x="113" y="300" width="1"  height="52"></rect>
+    </g>
+
+    <path
+      transform="translate(377.500000, 232.000000) rotate(-180.000000) translate(-377.500000, -232.000000)"
+      d="M 369 227
+         C 369 227 369 237 377.5 237
+         C 386 237 386 227 386   227
+         L 368 227
+         Z"
+      >
+    </path>
+    <path
+      id="lower-half"
+      fill="#000000"
+      d="M 27.5839844 305.607421
+         C 27.5839844 305.607421 108.449219 444.607421 228.974609 444.607421
+         C 349.5      444.607421 430.365234 305.607421 430.365234 305.607421
+         L 27.5839844 305.607421
+         Z"
+      >
+    </path>
+  </g>
+</svg>
