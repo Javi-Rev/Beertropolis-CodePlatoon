@@ -44,12 +44,94 @@ html, body {
   font-size: 1em;
 }
 
-h2 {
-  font-color: #900;
-  font-size: 5em;
-  text-align: center;
-  color: #900 !important; // bootstrap sets h2s to inherit
+.content {
+  position: absolute;
+  top: 50;
+  left: 50;
+  transform: translate(-50%, -50%);
+  font-size: 35px;
+  line-height: 40px;
+  font-family: 'Fjalla One', sans-serif;
+  color: #e55643;
+  height: 160px;
+  overflow:hidden;
 }
+
+.visible {
+  font-weight:600;
+  overflow:hidden;
+  height:40px;
+  padding:0 40px;
+
+  &:before {
+    content:'[';
+    left: 0;
+    line-height:40px;
+  }
+
+  &:after {
+    content: ']';
+    position:absolute;
+    right:0;
+    line-height:40px;
+  }
+
+  &:after, &:before {
+    position:absolute;
+    top:0;
+    color:#e55643;
+    font-size:42px;
+    animation:2s linear 0s normal none infinite opacity;
+  }
+}
+
+.scrolly {
+  margin-top:0;
+  padding-left:110px;
+  text-align:left;
+  list-style:none;
+  animation:6s linear 0s normal none infinite change;
+}
+
+.scrollyui {
+  line-height:40px;
+  margin:0;
+}
+
+@keyframes opacity {
+  0%, 100% {opacity:0;}
+  50% {opacity:1;}
+}
+
+@keyframes change {
+  0%, 12%, 100% {transform:translateY(0);}
+  17%,29% {transform:translateY(-25%);}
+  34%,46% {transform:translateY(-50%);}
+  51%,63% {transform:translateY(-75%);}
+  68%,80% {transform:translateY(-50%);}
+  85%,97% {transform:translateY(-25%);}
+}
+
+  .logofull {
+    position: relative;
+    left:-20%;
+    width: 40vw;
+    height:auto;
+    z-index: 1;
+  }
+
+  .banner {
+    font-size: 100px;
+    font-family: 'Fjalla One', sans-serif;
+    width: 100%;
+    text-align:center;
+    display: block;
+    position: relative;
+    $shadow: #533d4a;
+    color: #e55643;
+    text-shadow: $shadow 3px 3px;
+
+  }
 
 .animated {
   -webkit-transition: height 0.2s;

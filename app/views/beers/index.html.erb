@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+  
+    <h1 class="banner">All Beers</h1>
+  
+<div class="content">
+  <div class="visible">
+    <ul class="scrolly">
+    <% @beers.each do |b| %>
+      <%= link_to b.name, beer_path(b), :class => 'scrollyui' %>
 
-<h2>The Beer List</h2>
+    <% end %>
+    </ul>
+  </div>
+</div>
 
-
+<div class="list">
 <% @beers.each do |b| %>
   <%= link_to b.name, beer_path(b) %>
   <br>
@@ -12,4 +23,5 @@
   <br>
   <br>
 <% end %>
+</div>
 </html>
