@@ -27,7 +27,8 @@ Style: <% @beer.style %>
 
 <h2>Reviews</h2>
 
-<% @reviews.each do |r| %>
+
+<% @reviews.limit(10).each do |r| %>
 	| Manufacturer: <%= r.manufacturer %>
 | Beer Name: <%= r.name %>
 	| Review: <%= r.rating %>
