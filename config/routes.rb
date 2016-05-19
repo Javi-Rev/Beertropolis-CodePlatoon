@@ -5,7 +5,7 @@ Rails.application.routes.draw do
    end
 
   root 'welcome#index'
-
+  get '/about', to: 'about#index'
   get '/auth/twitter', as: 'login'
   match '/sessions', to: "sessions#destroy", as: 'logout', via: [:delete, :get]
   get 'auth/twitter/callback', to: "sessions#create"
