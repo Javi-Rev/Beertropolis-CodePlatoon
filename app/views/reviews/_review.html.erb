@@ -36,20 +36,11 @@
 </div>
 
 <script>
-  // found the regex here: https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie
-  <%# var match = document.cookie.match(/(?:(?:^|.*;\s*)latlon\s*\=\s*([^;]*).*$)|^.*$/); %>
-  <%# var cookieValue = (match && match[1]); %>
-  <%# if(cookieValue) %>
-  <%#   debugger %>
-  <%#   document.getElementById('latitude').value = cookieValue.split("|")[0] %>
-  <%#   document.getElementById('longitude').value = cookieValue.split("|")[1] %>
 
-  <%# if(!cookieValue && navigator.geolocation) { %>
     navigator.geolocation.getCurrentPosition(function(geoPosition) {
       var coords  =  geoPosition.coords
       document.getElementById('latitude').value = coords.latitude;
       document.getElementById('longitude').value = coords.longitude;
     });
-  <%# } %>
 </script>
 </html>
