@@ -17,3 +17,18 @@ end
 
 task :test, &mrspec
 task :spec, &mrspec
+
+desc 'rake migrate'
+task :drop do
+  sh "rake db:drop db:create db:migrate db:seed"
+end
+
+desc 'bundle'
+task :bundle do
+  sh "bundle install"
+end
+
+desc 'Source the environment'
+task :env do
+  sh ". ~/ansible/hacking/env-setup"
+end

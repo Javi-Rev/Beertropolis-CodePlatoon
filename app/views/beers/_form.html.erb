@@ -1,42 +1,45 @@
 <!DOCTYPE html>
 <html lang='en'>
+  <body>
+    <div class="list">
 
+  <%= form_for @beer do |f| %>
 
-<%= form_for @beer do |f| %>
-
-  <% if @beer.errors.any? %>
-    <div id="error_explanation">
-      <h2>
-        <%= pluralize(@beer.errors.count, "error") %>
+    <% if @beer.errors.any? %>
+      <div id="error_explanation">
+        <h2>
+          <%= pluralize(@beer.errors.count, "error") %>
 prohibited
         this beer from being saved:
-      </h2>
-      <ul>
-        <%= @beer.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
+        </h2>
+        <ul>
+          <%= @beer.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
     </div>
-  <% end %>
+    <% end %>
+    <div class="form">
+      <p>
+       <%= f.label :manufacturer %><br>
+       <%= f.text_field :manufacturer %>
+      </p>
 
-  <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </p>
+      <p>   
+       <%= f.label :name %><br>
+       <%= f.text_field :name %>
+      </p>
 
-  <p>
-    <%= f.label :style %><br>
-    <%= f.text_field :style %>
-  </p>
+      <p> 
+       <%= f.label :style %><br>
+       <%= f.text_field :style %>
+      </p>
 
-  <p>
-    <%= f.label :manufacturer %><br>
-    <%= f.text_field :manufacturer %>
-  </p>
-
-  <p>
-    <%= f.submit %>
-  </p>
-
+      <p>
+       <%= f.submit %>
+      </p>
+    </div> 
 <% end %>
+</body>
  </html> 

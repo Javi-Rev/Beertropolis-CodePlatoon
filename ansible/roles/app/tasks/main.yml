@@ -36,3 +36,4 @@
   command: >
     chdir=/tmp/beertropolis
     pumactl --config-file puma_config.rb start
+
