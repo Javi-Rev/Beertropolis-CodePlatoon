@@ -106,34 +106,50 @@ function drawAxisTickColors() {
         // [66, 70, 62], [67, 72, 64], [68, 75, 67], [69, 80, 72]
 
       var options = {
+
+        width: 650,
+        height: 400,
+        title: 'Price History (USD)',
+        lineWidth: 4,
+        trendlines: {
+          0: {
+            type: 'exponential',
+            }
+        },
         hAxis: {
-          title: 'Time',
+          title: 'Date',
           textStyle: {
             color: '#01579b',
-            fontSize: 20,
-            fontName: 'Arial',
-            bold: true,
-            italic: true
-          },
-          titleTextStyle: {
-            color: '#01579b',
-            fontSize: 16,
+            fontSize: 14,
             fontName: 'Arial',
             bold: false,
-            italic: true
-          }
-        },
-        vAxis: {
-          title: 'Popularity',
-          textStyle: {
-            color: '#1a237e',
-            fontSize: 24,
-            bold: true
+            italic: false
           },
           titleTextStyle: {
-            color: '#1a237e',
-            fontSize: 24,
-            bold: true
+            color: '#01579b',
+            fontSize: 14,
+            fontName: 'Arial',
+            bold: true,
+            italic: false
+          }
+        },
+
+        vAxis: {
+          title: 'Price ($)',
+          format: 'currency',
+          gridlines: {
+            count: 6
+          },
+          textStyle: {
+            color: '#01579b',
+            fontSize: 14,
+            bold: false
+          },
+          titleTextStyle: {
+            color: '#01579b',
+            fontSize: 14,
+            bold: true,
+            italic: false
           }
         },
         colors: ['#a52714', '#097138']

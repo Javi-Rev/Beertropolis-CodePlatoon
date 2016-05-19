@@ -57,9 +57,7 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFVHHySuYJJCeAQcJp-WTmQeZ
   <h2>Would you like to add your own review for <%= @beer.name %>?</h2>
   <%= render 'reviews/review' %>
 
-  <%= link_to 'Edit', edit_beer_path(@beer) %>
-  <%= link_to 'Back', beers_path %>
-</div>
+<div id="map"></div>
 
 
 <script type="text/javascript"
@@ -68,6 +66,8 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFVHHySuYJJCeAQcJp-WTmQeZ
 google.charts.load('current', {packages: ['corechart', 'line']});
 google.charts.setOnLoadCallback(drawAxisTickColors);
 </script>
+<div id="chart_div"></div>
+
 
 <div id="chart_div"></div>
 <div id="beer_stats">
