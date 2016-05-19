@@ -5,12 +5,11 @@ Rails.application.routes.draw do
    end
 
   root 'welcome#index'
-
+  get '/about', to: 'about#index'
   get '/auth/twitter', as: 'login'
   match '/sessions', to: "sessions#destroy", as: 'logout', via: [:delete, :get]
   get 'auth/twitter/callback', to: "sessions#create"
   get 'api/beers', to: 'api#beers'
-  get 'search/typeahead/:query' => 'search# typeahead'
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 

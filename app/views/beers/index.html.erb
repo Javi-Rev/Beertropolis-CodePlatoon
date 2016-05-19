@@ -3,16 +3,7 @@
   
     <h1 class="banner">All Beers</h1>
   
-<div class="content">
-  <div class="visible">
-    <ul class="scrolly">
-    <% @beers.each do |b| %>
-      <%= link_to b.name, beer_path(b), :class => 'scrollyui' %>
 
-    <% end %>
-    </ul>
-  </div>
-</div>
 
 <div class="list">
 <% @beers.each do |b| %>

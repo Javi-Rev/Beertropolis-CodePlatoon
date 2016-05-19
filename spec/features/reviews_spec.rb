@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'spec_helper'
 
 RSpec.describe "Review", :type => :feature do
   def assert_there_are_reviews

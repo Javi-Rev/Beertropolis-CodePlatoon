@@ -5,13 +5,13 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFVHHySuYJJCeAQcJp-WTmQeZ
 
 <h1>This is the BEERS:: SHOW  view</h1>
 
-<div id="floating-panel">
-	<button onclick="toggleHeatmap()">Toggle Heatmap</button>
-	<button onclick="changeGradient()">Change gradient</button>
-	<button onclick="changeRadius()">Change radius</button>
-	<button onclick="changeOpacity()">Change opacity</button>
-</div>
 <div id="map"></div>
+<div id="floating-panel">
+  <button onclick="toggleHeatmap()">Toggle Heatmap</button>
+  <button onclick="changeGradient()">Change gradient</button>
+  <button onclick="changeRadius()">Change radius</button>
+  <button onclick="changeOpacity()">Change opacity</button>
+</div>
 
 <script type="text/javascript"
         src="https://www.gstatic.com/charts/loader.js"></script>
@@ -37,7 +37,7 @@ Style: <% @beer.style %>
 <br>
 <% end %>
 
-<h2>Would you like to add your own review?</h2>
+<h2>Would you like to add your own review for <%= @beer.name %></h2>
 <%= render 'reviews/review' %>
 
 <%= link_to 'Edit', edit_beer_path(@beer) %>
