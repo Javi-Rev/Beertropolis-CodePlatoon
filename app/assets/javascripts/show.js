@@ -2,6 +2,7 @@ var map, heatmap;
 
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
+    scrollwheel: false,
     zoom: 12,
     center: {lat: 41.878, lng: -87.630},
     mapTypeId: google.maps.MapTypeId.MAP
