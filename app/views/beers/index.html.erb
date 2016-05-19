@@ -4,15 +4,17 @@
     <h1 class="banner">All Beers</h1>
   
 
-
 <div class="list">
-<% @beers.each do |b| %>
-  <%= link_to b.name, beer_path(b) %>
-  <br>
-  | Style: <%= b.style %>
-  | Manufacturer: <%= b.manufacturer %>
-  <br>
-  <br>
-<% end %>
+  
+  <% @beers.each do |b| %>
+    <div style ="color:orange">
+    <%= link_to b.name, beer_path(b) %>
+    <br>
+    Style: <%= b.style %><br>
+    Manufacturer: <%= b.manufacturer %>
+    <br>
+    <br>
+  </div>
+  <% end %>
 </div>
 </html>
