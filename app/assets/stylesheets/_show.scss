@@ -40,6 +40,19 @@
 #map {
   height: 300px;
 
+h1 {
+  position: absolute;
+  top: 10%;
+  font-size: 2em;
+}
+
+h3 {
+  position: absolute;
+  top: 15%;
+  font-size: 2em;
+}
+
+
   #floating-panel {
     position: absolute;
     top: 10px;
@@ -55,6 +68,8 @@
 }
 
 #chart_div {
+  position: relative;
+  top: 20%;
   height: 400px;
   width:  600px;
 }
