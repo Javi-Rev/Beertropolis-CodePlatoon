@@ -23,11 +23,6 @@ task :bundle do
     sh "bundle install"
 end
 
-desc 'rake migrate'
-task :drop do
-    sh "rake db:drop db:create db:migrate db:seed"
-end
-
 desc 'Source the environment'
 task :env do
     sh ". ~/ansible/hacking/env-setup"
