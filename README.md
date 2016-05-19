@@ -21,7 +21,7 @@ AWS
 
 * ssh -i Beer.pem ec2-user@52.40.14.9  (Allows you to enter EC2.)
 
-* rake db:drop indb:create db:migrate db:seed (Migrate the database.)
+* rake db:drop db:create db:migrate db:seed (Migrate the database.)
 
 * bundle install
 
