@@ -57,15 +57,7 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFVHHySuYJJCeAQcJp-WTmQeZ
   <h2>Would you like to add your own review for <%= @beer.name %>?</h2>
   <%= render 'reviews/review' %>
 
-  <%= link_to 'Back', beers_path %>
-
 <div id="map"></div>
-<div id="floating-panel">
-  <button onclick="toggleHeatmap()">Toggle Heatmap</button>
-  <button onclick="changeGradient()">Change gradient</button>
-  <button onclick="changeRadius()">Change radius</button>
-  <button onclick="changeOpacity()">Change opacity</button>
-</div>
 
 
 <script type="text/javascript"
@@ -76,16 +68,6 @@ google.charts.setOnLoadCallback(drawAxisTickColors);
 </script>
 <div id="chart_div"></div>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<h2>Reviews</h2>
->>>>>>> origin/javi_styles_show_page
 
 
 
