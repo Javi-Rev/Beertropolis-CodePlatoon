@@ -1,22 +1,65 @@
 #map {
   height: 50%;
-  width: 75%;
+  width:  75%;
 
   #floating-panel {
-    position: absolute;
-    top: 10px;
-    left: 25%;
+    position:         absolute;
+    top:              10px;
+    left:             25%;
     background-color: #fff;
-    padding: 5px;
-    border: 1px solid #999;
-    text-align: center;
-    font-family: 'Roboto','sans-serif';
-    line-height: 30px;
-    padding-left: 10px;
+    padding:          5px;
+    border:           1px solid #999;
+    text-align:       center;
+    font-family:      'Roboto','sans-serif';
+    line-height:      30px;
+    padding-left:     10px;
   }
 }
 
 #chart_div {
+  position: inline;
+  float:    left;
+  height:   400px;
+  width:    600px;
+}
+
+#beer_stats {
   height: 400px;
-  width:  600px;
+  width:  1000px;
+}
+
+#stat_line {
+  width:       100px;
+  height:      100px;
+  margin-top:  200px;
+  float:       right;
+}
+
+#average_price {
+  width:            130px;
+  height:           50px;
+  margin:           10px;
+  background-color: red;
+  border:           1px solid;
+  padding-top:      5px;
+  font-size:        13px;
+  text-align:       center;
+}
+
+#beer_name {
+  width:            280px;
+  height:           50px;
+  margin:           10px;
+  background-color: red;
+  border:           1px solid;
+  margin:           10px;
+  text-align:       center;
+}
+
+.float_left {
+  float: left;
+}
+
+.float_right {
+  float: right;
 }

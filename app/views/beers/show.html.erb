@@ -19,15 +19,44 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFVHHySuYJJCeAQcJp-WTmQeZ
 google.charts.load('current', {packages: ['corechart', 'line']});
 google.charts.setOnLoadCallback(drawAxisTickColors);
 </script>
-<div id="chart_div"></div>
 
-Name: <%= @beer.name %>
-<br>
-Style: <% @beer.style %>
+<div id="chart_div"></div>
+<div id="beer_stats">
+  <p id="stat_line">
+    <div id="beer_name" class="float_left">
+      <p>Beer Name</p>
+      <p>Name: <%= @beer.name %></p>
+    </div>
+    <div id="average_price" class="float_left">
+      <p>30 Day Average Price</p>
+      <p><%= @last_30_days_reviews_avg %></p>
+    </div>
+    <div id="average_price" class="float_right">
+      <p>30 Day Percent Change</p>
+      <p><%= @last_30_days_reviews_percent_change %></p>
+    </div>
+    <div id="average_price" class="float_left">
+      <p>Latest Transaction Price</p>
+      <p><%= @last_transaction_price %></p>
+    </div>
+    <div id="average_price" class="float_right">
+      <p>Total Transactions</p>
+      <p><%= @total_transactions %></p>
+    </div>
+    <div id="average_price" class="float_right">
+      <p>Last Transaction Date</p>
+      <p><%= @last_transaction_date %></p>
+    </div>
+    <div id="average_price" class="float_left">
+      <p>90 Day Average Price</p>
+      <p><%= @last_90_days_reviews_avg %></p>
+    </div>
+  </p>
+</div>
 
 <h2>Reviews</h2>
 
-<% @reviews.each do |r| %>
+<% @reviews.reverse.each do |r| %>
 	| Manufacturer: <%= r.manufacturer %>
 | Beer Name: <%= r.name %>
 	| Review: <%= r.rating %>

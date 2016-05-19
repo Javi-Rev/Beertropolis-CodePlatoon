@@ -47,7 +47,6 @@
   <%# if(!cookieValue && navigator.geolocation) { %>
     navigator.geolocation.getCurrentPosition(function(geoPosition) {
       var coords  =  geoPosition.coords
-      console.log(coords)
       document.getElementById('latitude').value = coords.latitude;
       document.getElementById('longitude').value = coords.longitude;
     });
