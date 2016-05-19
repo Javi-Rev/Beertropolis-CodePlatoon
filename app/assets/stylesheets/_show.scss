@@ -1,40 +1,37 @@
 #beershow {
-  padding-top: 60px;
+  padding-top:    60px;
   padding-bottom: 100px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left:   30px;
+  padding-right:  30px;
 
   h1 {
-    position: static;
-    text-align: center;
-    color: gray;
-    font-size: 2em;
-    font-weight: bold
+    position:    static;
+    text-align:  center;
+    color:       gray;
+    font-size:   2em;
+    font-weight: bold;
   }
 
   h2 {
-    color: red;
+    color:      red;
     text-align: center;
   }
   .mapbuttons {
     margin-top: 10px;
-    width: 100%;
+    width:      100%;
   }
   .review {
     padding-top: 8px;
     p {
       background-color: #A2ACAD;
-      font-size: 1.25em;
-      padding: 10px 8px;
+      font-size:        1.25em;
+      padding:          10px 8px;
     }
     .heading {
       background-color: #7E7E7D;
-      font-size: 1.5em;
+      font-size:        1.5em;
     }
   }
-  // // .container-fluid {
-  //   padding-top: 100px;
-  // }
 }
 
 #map {
@@ -54,22 +51,61 @@ h3 {
 
 
   #floating-panel {
-    position: absolute;
-    top: 10px;
-    left: 25%;
+    position:         absolute;
+    top:              10px;
+    left:             25%;
     background-color: #fff;
-    padding: 5px;
-    border: 1px solid #999;
-    text-align: center;
-    font-family: 'Roboto','sans-serif';
-    line-height: 30px;
-    padding-left: 10px;
+    padding:          5px;
+    border:           1px solid #999;
+    text-align:       center;
+    font-family:      'Roboto','sans-serif';
+    line-height:      30px;
+    padding-left:     10px;
   }
 }
 
 #chart_div {
-  position: relative;
-  top: 20%;
+  height:   400px;
+  width:    600px;
+}
+
+#beer_stats {
   height: 400px;
-  width:  600px;
+  width:  1000px;
+}
+
+#stat_line {
+  width:       100px;
+  height:      100px;
+  margin-top:  200px;
+  float:       right;
+}
+
+#average_price {
+  width:            130px;
+  height:           50px;
+  margin:           10px;
+  background-color: red;
+  border:           1px solid;
+  padding-top:      5px;
+  font-size:        13px;
+  text-align:       center;
+}
+
+#beer_name {
+  width:            280px;
+  height:           50px;
+  margin:           10px;
+  background-color: red;
+  border:           1px solid;
+  margin:           10px;
+  text-align:       center;
+}
+
+.float_left {
+  float: left;
+}
+
+.float_right {
+  float: right;
 }
