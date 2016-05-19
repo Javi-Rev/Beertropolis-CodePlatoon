@@ -1,4 +1,18 @@
+h1 {
+  position: absolute;
+  top: 10%;
+  font-size: 2em;
+}
+
+h3 {
+  position: absolute;
+  top: 15%;
+  font-size: 2em;
+}
+
 #map {
+  position: relative;
+  top: 20%;
   height: 50%;
   width: 75%;
 
@@ -17,6 +31,8 @@
 }
 
 #chart_div {
+  position: relative;
+  top: 20%;
   height: 400px;
   width:  600px;
 }

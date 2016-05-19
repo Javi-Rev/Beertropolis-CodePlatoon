@@ -3,7 +3,9 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFVHHySuYJJCeAQcJp-WTmQeZ
 </script>
 <%= javascript_include_tag "show.js" %>
 
-<h1>This is the BEERS:: SHOW  view</h1>
+<h1><%= @beer.name %></h1>
+<br>
+<h3>Style: <% @beer.style %></h3>
 
 <div id="map"></div>
 <div id="floating-panel">
@@ -21,10 +23,14 @@ google.charts.setOnLoadCallback(drawAxisTickColors);
 </script>
 <div id="chart_div"></div>
 
-Name: <%= @beer.name %>
 <br>
-Style: <% @beer.style %>
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <h2>Reviews</h2>
 
 <% @reviews.each do |r| %>
