@@ -14,6 +14,7 @@
   roles:
     - app
   environment:
+    RAILS_ENV: production
     PATH: "/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/aws/bin:/home/ec2-user/.local/bin:/home/ec2-user/bin"
     TWITTER_CONSUMER_KEY: "{{ lookup('env', 'TWITTER_CONSUMER_KEY') }}"
     TWITTER_CONSUMER_SECRET: "{{ lookup('env', 'TWITTER_CONSUMER_SECRET') }}"
