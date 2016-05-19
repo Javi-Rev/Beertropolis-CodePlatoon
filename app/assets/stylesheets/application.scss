@@ -64,7 +64,9 @@ ul {
   padding: 0;
   overflow: hidden;
   background-color: #e55643;
-  box-shadow: 5px 5px 2px #732626;
+  border-bottom-style: ridge;
+  border-bottom-color: #565457;
+  border-bottom-width: 3px;
   z-index: 2;
 }
 
@@ -94,6 +96,9 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
+  border-top-color: #565457;
+  border-top-width: 3px;
+  border-top-style:ridge;
 }
 
 .list {
