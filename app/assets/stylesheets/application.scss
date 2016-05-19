@@ -18,6 +18,7 @@
 @import "variables";
 @import "welcome";
 @import "show";
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
 
 html, body {
   height: 100%;
@@ -64,7 +65,9 @@ ul {
   padding: 0;
   overflow: hidden;
   background-color: #e55643;
-  box-shadow: 5px 5px 2px #732626;
+  border-bottom-style: ridge;
+  border-bottom-color: #565457;
+  border-bottom-width: 3px;
   z-index: 2;
 }
 
@@ -79,10 +82,10 @@ a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+
 }
 
-li a:hover {
-  background-color: #4d3333;
+.stylizedname { color: #4D4A4E;
 }
 .header {
   top: 0;
@@ -94,6 +97,9 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
+  border-top-color: #565457;
+  border-top-width: 3px;
+  border-top-style:ridge;
 }
 
 .list {
@@ -104,7 +110,7 @@ footer {
 }
 .form {
   vertical-align:center;
-  
+
   font-family: 'Fjalla One', sans-serif;
   text-align:center;
   color:#e55643;
@@ -113,4 +119,10 @@ footer {
 .paragraph {
   text-align:center;
   color: orange;
+}
+.headername {
+  left: 50%;
+  font-size: 2em;
+  font-family: 'Pacifico', sans-serif;
+  font-weight: bold;
 }

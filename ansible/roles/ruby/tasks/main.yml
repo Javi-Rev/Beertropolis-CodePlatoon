@@ -73,3 +73,7 @@
   with_items:
     - rails_beertropolis_development
     - rails_beertropolis_production
+
+- name: Redirect port to 80
+  command: >
+    iptables -t nat -I PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 3000

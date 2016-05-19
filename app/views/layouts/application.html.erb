@@ -10,15 +10,15 @@
   </head>
   <body>
     <ul>
-      <li>
+      <li class="headername" style="align:center float:center"><a class="stylizedname" href="/">Beertropolis</a></li>
+      <li style="align:center"><a href="logo"></a></li>
+      <li style="float:right">
         <% if logged_in? %>
           <%= link_to "Log Out", logout_path %>
         <% else %>
           <%= link_to "Log In", login_path %>
         <% end %>
       </li>
-      <li><a href="/">Home</a></li>
-      <li style="align:center"><a href="logo"></a></li>
       <li style="float:right"><a href="/beers">Beers</a></li>
       <li style="float:right"><a href="/about">About Us</a></li>
     </ul>

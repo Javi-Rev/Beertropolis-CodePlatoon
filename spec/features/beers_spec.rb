@@ -4,10 +4,11 @@ require 'spec_helper'
 RSpec.describe "Beers views", :type => :feature do
   scenario "User wants to view all beers" do
 
-    Beer.create!(manufacturer: "Anheiseur Busch", name: "Zombie Dust")
+    beer = Beer.create!(manufacturer: "Anheiser Busch", name: "Zombie Dust")
+    review = beer.reviews.create!(price: 56, body: "hello", rating: 4)
 
     visit beers_path
-    assert page.has_content?('Anheiseur Busch')
+    assert page.has_content?('Anheiser Busch')
     assert page.has_content?('Zombie Dust')
 
     click_on 'Zombie Dust'

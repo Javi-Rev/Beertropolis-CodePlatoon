@@ -24,7 +24,7 @@ var beerNames = gon.Names
 var path_id
 
 $(function() {
-  $('#the-basics .typeahead').typeahead({
+  $('#typeaheadsearch .typeahead').typeahead({
     hint: true,
     highlight: true,
     minLength: 1
