@@ -1,0 +1,38 @@
+---
+
+- name: Clone application from git
+  git:
+    dest=/tmp/beertropolis
+    repo=https://github.com/Javi-Rev/Beertropolis
+  
+- name: Install bundler
+  gem:
+    name=bundler
+    state=present
+  
+- name: Bundler Install
+  bundler:
+    chdir=/tmp/beertropolis
+    executable=~/bin/bundler
+    state=present
+    gemfile=Gemfile
+
+- name: Create DB
+  command: >
+    chdir=/tmp/beertropolis
+    /home/ec2-user/bin/bundle exec rake db:create
+  
+- name: Migrate DB
+  command: >
+    chdir=/tmp/beertropolis
+    /home/ec2-user/bin/bundle exec rake db:migrate
+    
+- name: Seed DB
+  command: >
+    chdir=/tmp/beertropolis
+    /home/ec2-user/bin/bundle exec rake db:seed
+
+- name: Start Rails Server
+  command: >
+    chdir=/tmp/beertropolis
+    rails server --binding=0.0.0.0

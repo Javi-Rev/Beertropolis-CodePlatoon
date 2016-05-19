@@ -1,0 +1,75 @@
+---
+
+- name: Remove older Ruby20
+  yum:
+    name=ruby20
+    state=absent
+      
+- name: Install Ruby23
+  yum:
+    name=ruby23
+    state=present
+
+- name: Install ruby23-devel
+  yum:
+    name=ruby23-devel
+    state=present
+
+- name: Install postgres
+  yum:
+    name={{ item }}
+    state=latest
+    enablerepo=epel
+  with_items:
+    - postgresql94-server
+    - postgresql94
+    - postgresql94-devel
+    - nodejs
+  register: install_postgres
+
+- name: Install Git
+  yum:
+    name=git
+    state=latest
+
+- name: Install DevTools
+  yum:
+    name=@Dev*
+    state=present
+
+- name: Configure Postgresql
+  command:
+    service postgresql94 initdb
+  when: install_postgres|changed
+
+- name: Start Postgresql
+  service:
+    name=postgresql94
+    state=started
+
+- name: Pip install
+  pip:
+    name=psycopg2
+    state=present
+
+- name: ensure database is created
+  sudo_user: postgres
+  postgresql_db:
+    name={{ item }}
+    state=present
+  with_items:
+    - rails_beertropolis_development
+    - rails_beertropolis_production
+
+- name: Create postgres user
+  sudo_user: postgres
+  postgresql_user:
+    db={{ item }}
+    name=ec2-user
+    login_user=postgres
+    priv=ALL
+    role_attr_flags=SUPERUSER
+    state=present
+  with_items:
+    - rails_beertropolis_development
+    - rails_beertropolis_production
