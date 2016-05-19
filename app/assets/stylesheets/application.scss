@@ -21,10 +21,11 @@
 @import url(http://fonts.googleapis.com/css?family=Pacifico);
 
 html, body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
+  background-color: black;
+  height:           100%;
+  width:            100%;
+  margin:           0;
+  padding:          0;
 }
 
 #login {
@@ -32,43 +33,43 @@ html, body {
 }
 
   .banner {
-    font-size: 100px;
+    font-size:   100px;
     font-family: 'Fjalla One', sans-serif;
-    width: 100%;
-    text-align:center;
-    display: in-line;
-    position: relative;
-    top: 100px;
-    $shadow: #533d4a;
-    color: #e55643;
+    width:       100%;
+    text-align:  center;
+    display:     in-line;
+    position:    relative;
+    top:         100px;
+    $shadow:     #533d4a;
+    color:       #e55643;
     text-shadow: $shadow 3px 3px;
 
   }
 
 .animated {
   -webkit-transition: height 0.2s;
-  -moz-transition: height 0.2s;
-  transition: height 0.2s;
+  -moz-transition:    height 0.2s;
+  transition:         height 0.2s;
 }
 
 .stars {
-  margin: 20px 0;
+  margin:    20px 0;
   font-size: 24px;
-  color: #d17581;
+  color:     #d17581;
 }
 
 ul {
-  list-style-type: none;
-  position: fixed;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #e55643;
+  list-style-type:     none;
+  position:            fixed;
+  width:               100%;
+  margin:              0;
+  padding:             0;
+  overflow:            hidden;
+  background-color:    #e55643;
   border-bottom-style: ridge;
   border-bottom-color: #565457;
   border-bottom-width: 3px;
-  z-index: 2;
+  z-index:             2;
 }
 
 li {
@@ -76,53 +77,55 @@ li {
 }
 
 a {
-  display: block;
-  padding: 8px;
-  color: #732626;
-  text-align: center;
-  padding: 14px 16px;
+  display:         block;
+  padding:         8px;
+  color:           #732626;
+  text-align:      center;
+  padding:         14px 16px;
   text-decoration: none;
 
 }
 
-.stylizedname { color: #4D4A4E;
+.stylizedname {
+  color: #4D4A4E;
 }
+
 .header {
   top: 0;
 }
 
 footer {
   background-color: #e55643;
-  display: block;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  display:          block;
+  position:         fixed;
+  bottom:           0;
+  width:            100%;
   border-top-color: #565457;
   border-top-width: 3px;
-  border-top-style:ridge;
+  border-top-style: ridge;
 }
 
 .list {
-  position: relative;
-  top: 120px;
+  position:   relative;
+  top:        120px;
   text-align: center;
 
 }
 .form {
-  vertical-align:center;
+  vertical-align: center;
 
   font-family: 'Fjalla One', sans-serif;
-  text-align:center;
-  color:#e55643;
+  text-align:  center;
+  color:       #e55643;
 }
 
 .paragraph {
-  text-align:center;
-  color: orange;
+  text-align: center;
+  color:      orange;
 }
 .headername {
-  left: 50%;
-  font-size: 2em;
+  left:        50%;
+  font-size:   2em;
   font-family: 'Pacifico', sans-serif;
   font-weight: bold;
 }
