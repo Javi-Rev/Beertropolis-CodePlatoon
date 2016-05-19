@@ -18,7 +18,5 @@ RSpec.describe "Review", :type => :feature do
       let(:review) {'beer review'}
     end
   end
-
-
 end
 
