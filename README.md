@@ -17,7 +17,8 @@ Please feel free to use a different markup language if you do not plan to run
 AWS
 ===
 
-* The following code needs to be enter in the Terminal.
+* The following code needs to be enter in the Terminal. You need to go to the same
+  directory as your private AWS keys are located.
 
 * ssh -i Beer.pem ec2-user@52.40.14.9  (Allows you to enter EC2.)
 
