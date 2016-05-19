@@ -88,19 +88,5 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFVHHySuYJJCeAQcJp-WTmQeZ
 google.charts.load('current', {packages: ['corechart', 'line']});
 google.charts.setOnLoadCallback(drawAxisTickColors);
 </script>
-<div id="chart_div"></div>
 
 
-<div id="chart_div"></div>
-
-<h2>Reviews</h2>
-
-<% @reviews.reverse.each do |r| %>
-	| Manufacturer: <%= r.manufacturer %>
-| Beer Name: <%= r.name %>
-	| Review: <%= r.rating %>
-<br>
-| Body: <%= r.body %>
-<br>
-<br>
-<% end %>
