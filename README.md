@@ -17,15 +17,20 @@ Please feel free to use a different markup language if you do not plan to run
 AWS
 ===
 
-* The following code needs to be enter in the Terminal.
+* The following code needs to be enter in the Terminal. You need to go to the same
+  directory as your private AWS keys are located.
 
 * ssh -i Beer.pem ec2-user@52.40.14.9  (Allows you to enter EC2.)
 
-* rake db:drop indb:create db:migrate db:seed (Migrate the database.)
+* Move into Beertopolis/
+
+* rake db:drop db:create db:migrate db:seed (Migrate the database.)
 
 * bundle install
 
 * .  ~/ansible/hacking/env-setup (Sources the environment.)
+
+* Move into the ansible/ 
 
 * ansible-playbook -i 'localhost,' -c local playbook.yml (Set ups playbook file and starts server.)
 

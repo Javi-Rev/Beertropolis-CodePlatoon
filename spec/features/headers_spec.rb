@@ -17,10 +17,10 @@ RSpec.describe "Page headers and footers are operable", :type => :feature do
     assert page.has_content?('Home')
 
     click_on 'Home'
-    # assert page.has_content?('About Us')
-    # click_on 'About Us'
+    assert page.has_content?('About Us')
+    click_on 'About Us'
 
     assert page.has_content?('Javi')
-    assert page.has_content?('JMMS@beertropolis.com')
+    assert page.has_content?('Contact Us!')
   end
 end

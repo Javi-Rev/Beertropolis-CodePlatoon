@@ -4,6 +4,7 @@
   git:
     dest=/tmp/beertropolis
     repo=https://github.com/Javi-Rev/Beertropolis
+    version=aws
   
 - name: Install bundler
   gem:
@@ -35,4 +36,5 @@
 - name: Start Rails Server
   command: >
     chdir=/tmp/beertropolis
-    rails server --binding=0.0.0.0
+    pumactl --config-file puma_config.rb start
+

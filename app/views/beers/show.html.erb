@@ -3,15 +3,64 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFVHHySuYJJCeAQcJp-WTmQeZ
 </script>
 <%= javascript_include_tag "show.js" %>
 
-<h1>This is the BEERS:: SHOW  view</h1>
+<div class="container-fluid" id="beershow">
+  <div class="row">
+    <h1><%= @beer.name %></h1>
+  </div>
+  <div class="row">
+    <h2><%= @beer.style %></h2>
+  </div>
+  <div class="row">
+    <p>I AM THE BEER BLURB</p>
+  </div>
+  <div class="row">
+    <div class="col-md-6" id="chart_div">
+    </div>
+    <div class="col-md-5">
+      <div class="row">
+        <div class="col-md-6">Iam row 1 col 1</div>
+        <div class="col-md-6">Iam row 1 col 2</div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">Iam row 2 col 1</div>
+        <div class="col-md-6">Iam row 2 col 2</div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">Iam row 3 col 1</div>
+        <div class="col-md-6">Iam row 3 col 2</div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-10" id="map">
+    </div>
+    <div class="col-md-2" id="floating-panel">
+      <button class="mapbuttons" onclick="toggleHeatmap()">Toggle Heatmap</button>
+      <button class="mapbuttons" onclick="changeGradient()">Change gradient</button>
+      <button class="mapbuttons" onclick="changeRadius()">Change radius</button>
+      <button class="mapbuttons" onclick="changeOpacity()">Change opacity</button>
+    </div>
+  </div>
+  <h2>Reviews</h2>
+  <% @reviews.limit(10).each do |r| %>
+  <div class="review">
+    <div class="row heading">
+      <div>
+        <div class="col-md-6">Name: ERB for USERNAME</div>
+        <div class="col-md-6">Review: <%= r.rating %></div>
+      </div>
+    </div>
+    <p class="row"><%= r.body %></p>
+  </div>
+  <% end %>
 
-<div id="map"></div>
-<div id="floating-panel">
-  <button onclick="toggleHeatmap()">Toggle Heatmap</button>
-  <button onclick="changeGradient()">Change gradient</button>
-  <button onclick="changeRadius()">Change radius</button>
-  <button onclick="changeOpacity()">Change opacity</button>
+  <h2>Would you like to add your own review for <%= @beer.name %>?</h2>
+  <%= render 'reviews/review' %>
+
+  <%= link_to 'Edit', edit_beer_path(@beer) %>
+  <%= link_to 'Back', beers_path %>
 </div>
+
 
 <script type="text/javascript"
         src="https://www.gstatic.com/charts/loader.js"></script>
@@ -65,11 +114,3 @@ google.charts.setOnLoadCallback(drawAxisTickColors);
 <br>
 <br>
 <% end %>
-
-<h2>Would you like to add your own review for <%= @beer.name %></h2>
-<%= render 'reviews/review' %>
-
-<%= link_to 'Edit', edit_beer_path(@beer) %>
-<%= link_to 'Back', beers_path %>
-
-
