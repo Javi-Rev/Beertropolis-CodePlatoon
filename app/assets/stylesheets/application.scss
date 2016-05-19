@@ -18,6 +18,7 @@
 @import "variables";
 @import "welcome";
 @import "show";
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
 
 html, body {
   height: 100%;
@@ -79,10 +80,10 @@ a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+
 }
 
-li a:hover {
-  background-color: #4d3333;
+.stylizedname { color: #4D4A4E;
 }
 .header {
   top: 0;
@@ -113,4 +114,10 @@ footer {
 .paragraph {
   text-align:center;
   color: orange;
+}
+.headername {
+  left: 50%;
+  font-size: 2em;
+  font-family: 'Pacifico', sans-serif;
+  font-weight: bold;
 }
