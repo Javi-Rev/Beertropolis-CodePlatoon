@@ -17,3 +17,38 @@ end
 
 task :test, &mrspec
 task :spec, &mrspec
+
+desc 'bundle'
+task :bundle do
+    sh "bundle install"
+end
+
+desc 'rake migrate'
+task :drop do
+    sh "rake db:drop db:create db:migrate db:seed"
+end
+
+desc 'Source the environment'
+task :env do
+    sh ". ~/ansible/hacking/env-setup"
+end
+
+desc 'ansible playbook'
+task :playbook do
+  sh "ansible-playbook -i 'localhost,' -c local playbook.yml"
+end
+
+desc 'puma start'
+task :start do
+  sh "pumactl --config-file puma_config.rb start"
+end
+
+desc 'puma restart'
+task :restart do
+  sh "pumactl --config-file puma_config.rb restart"
+end
+
+desc 'puma stop'
+task :stop do
+  sh "pumactl --config-file puma_config.rb stop"
+end
