@@ -7,12 +7,13 @@ class BeersController < ApplicationController
   def show
     @beer = Beer.find(params[:id])
     @reviews = @beer.reviews.order(:created_at)
-    @last_transaction_date = @reviews.last.transaction_date
-    @total_transactions = @reviews.count
-    @last_transaction_price = @reviews.last.transaction_price
-    @last_30_days_reviews_avg = last_30_days_reviews_avg
-    @last_90_days_reviews_avg = last_90_days_reviews_avg
+    @last_transaction_date =               @reviews.last.transaction_date
+    @total_transactions =                  @reviews.count
+    @last_transaction_price =              @reviews.last.transaction_price
+    @last_30_days_reviews_avg =            last_30_days_reviews_avg
+    @last_90_days_reviews_avg =            last_90_days_reviews_avg
     @last_30_days_reviews_percent_change = last_30_days_reviews_percent_change
+    @avg_reviews_rating =                  avg_reviews_rating
 
     gon.latLong = @reviews.map do |review|
       {latitude: review.latitude, longitude: review.longitude}
@@ -75,15 +76,20 @@ class BeersController < ApplicationController
   end
 
   def last_30_days_reviews_percent_change
-    sum = 0
     prices = []
     last_30_days_reviews = @reviews.where("created_at > ?", 30.days.ago)
     last_30_days_reviews.each do |review|
       prices << review.price.round(2)
     end
-    max = prices.max
-    min = prices.min
-    change = (((max - min) / min) * 100).round(2).to_s + '%'
+    change = (((prices.max - prices.min) / prices.min) * 100).round(2).to_s + '%'
+  end
+
+  def avg_reviews_rating
+    sum = 0
+    @reviews.each do |review|
+      sum += review.rating
+    end
+    (sum / @reviews.count).round(1).to_s + ' stars'
   end
 
   private
