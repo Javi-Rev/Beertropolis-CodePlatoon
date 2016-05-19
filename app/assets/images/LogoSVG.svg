@@ -68,6 +68,6 @@
                 <rect id="Rectangle-1-Copy-16" stroke="#E55643" stroke-width="3" fill="#E55643" x="198" y="351" width="1" height="52"></rect>
             </g>
         </g>
-        <use id="Oval-2" stroke="#565457" mask="url(#mask-5)" stroke-width="26" xlink:href="#path-4"></use>
+        <use id="Oval-2" stroke="#4D4A4E" mask="url(#mask-5)" stroke-width="26" xlink:href="#path-4"></use>
     </g>
 </svg>
