@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="553px" height="552px" viewBox="0 0 553 552" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
+    <title>Slice 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <ellipse id="path-1" cx="221.5" cy="290" rx="221.5" ry="220"></ellipse>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-34" y="-34" width="511" height="508">
+            <rect x="-34" y="36" width="511" height="508" fill="white"></rect>
+            <use xlink:href="#path-1" fill="black"></use>
+        </mask>
+        <mask id="mask-3" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-1" y="-1" width="445" height="442">
+            <rect x="-1" y="69" width="445" height="442" fill="white"></rect>
+            <use xlink:href="#path-1" fill="black"></use>
+        </mask>
+        <path d="M276,524 C415.728042,524 529,412.518903 529,275 C529,137.481097 415.728042,26 276,26 C136.271958,26 23,137.481097 23,275 C23,412.518903 136.271958,524 276,524 Z" id="path-4"></path>
+        <mask id="mask-5" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-13" y="-13" width="532" height="524">
+            <rect x="10" y="13" width="532" height="524" fill="white"></rect>
+            <use xlink:href="#path-4" fill="black"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="beertropolis" transform="translate(55.000000, -14.000000)">
+            <g id="Page-1">
+                <g id="Oval-1" stroke="#E55643">
+                    <use mask="url(#mask-2)" stroke-width="68" xlink:href="#path-1"></use>
+                    <use mask="url(#mask-3)" stroke-width="2" xlink:href="#path-1"></use>
+                </g>
+                <text id="B" fill="#E55643" font-family="Helvetica-BoldOblique, Helvetica" font-size="296" font-style="italic" font-weight="bold">
+                    <tspan x="152" y="287">B</tspan>
+                </text>
+                <rect id="Rectangle-1" stroke="#E55643" stroke-width="3" fill="#E55643" x="368" y="332" width="27" height="80"></rect>
+                <rect id="Rectangle-1-Copy" stroke="#E55643" stroke-width="3" fill="#E55643" x="351" y="302" width="17" height="139"></rect>
+                <rect id="Rectangle-1-Copy-9" stroke="#E55643" stroke-width="3" fill="#E55643" x="221" y="311" width="10" height="139"></rect>
+                <rect id="Rectangle-1-Copy-10" stroke="#E55643" stroke-width="3" fill="#E55643" x="236" y="325" width="10" height="139"></rect>
+                <rect id="Rectangle-1-Copy-11" stroke="#E55643" stroke-width="3" fill="#E55643" x="253" y="338" width="10" height="139"></rect>
+                <rect id="Rectangle-1-Copy-17" stroke="#E55643" stroke-width="3" fill="#E55643" x="175" y="337" width="20" height="139"></rect>
+                <rect id="Rectangle-1-Copy-25" stroke="#E55643" stroke-width="3" fill="#E55643" x="226" y="378" width="10" height="137"></rect>
+                <rect id="Rectangle-1-Copy-26" stroke="#E55643" stroke-width="3" fill="#E55643" x="241" y="359" width="27" height="59"></rect>
+                <rect id="Rectangle-1-Copy-19" stroke="#E55643" stroke-width="3" fill="#E55643" x="125" y="276" width="20" height="139"></rect>
+                <rect id="Rectangle-1-Copy-18" stroke="#E55643" stroke-width="3" fill="#E55643" x="156" y="233" width="17" height="139"></rect>
+                <rect id="Rectangle-1-Copy-12" stroke="#E55643" stroke-width="3" fill="#E55643" x="287" y="295" width="17" height="139"></rect>
+                <rect id="Rectangle-1-Copy-14" stroke="#E55643" stroke-width="3" fill="#E55643" x="301" y="285" width="1" height="52"></rect>
+                <rect id="Rectangle-1-Copy-13" stroke="#E55643" stroke-width="3" fill="#E55643" x="274" y="354" width="27" height="75"></rect>
+                <rect id="Rectangle-1-Copy-8" stroke="#E55643" stroke-width="3" fill="#E55643" x="395" y="311" width="17" height="80"></rect>
+                <rect id="Rectangle-1-Copy-2" stroke="#E55643" stroke-width="3" fill="#E55643" x="333" y="340" width="27" height="80"></rect>
+                <rect id="Rectangle-1-Copy-3" stroke="#E55643" stroke-width="3" fill="#E55643" x="313" y="318" width="27" height="92"></rect>
+                <rect id="Rectangle-1-Copy-4" stroke="#E55643" stroke-width="3" fill="#E55643" x="318" y="302" width="17" height="80"></rect>
+                <rect id="Rectangle-1-Copy-5" stroke="#E55643" stroke-width="3" fill="#E55643" x="151" y="359" width="48" height="80"></rect>
+                <rect id="Rectangle-1-Copy-6" stroke="#E55643" stroke-width="3" fill="#E55643" x="58" y="346" width="17" height="52"></rect>
+                <rect id="Rectangle-1-Copy-24" stroke="#E55643" stroke-width="3" fill="#E55643" x="113" y="306" width="17" height="80"></rect>
+                <rect id="Rectangle-1-Copy-27" stroke="#E55643" stroke-width="3" fill="#E55643" x="125" y="365" width="48" height="59"></rect>
+                <rect id="Rectangle-1-Copy-22" stroke="#E55643" stroke-width="3" fill="#E55643" x="36" y="414" width="17" height="29"></rect>
+                <path d="M0,381 C0,381 88.9398376,538 221.5,538 C354.060163,538 443,381 443,381 L0,381 L0,381 Z" id="Path-1" fill="#E55643"></path>
+                <path d="M78,362 C78,362 78,372 88,372 C98,372 98,362 98,362 L78,362 L78,362 Z" id="Path-1-Copy" fill="#E55643" transform="translate(88.000000, 367.000000) rotate(180.000000) translate(-88.000000, -367.000000) "></path>
+                <path d="M97.1168888,244.906968 C105.655177,245.882764 113.972439,248.08816 113.972439,248.08816 C113.972439,248.08816 97.9510124,251.724524 89.9724387,251.724524 C81.9510124,251.724524 65.9724387,248.08816 65.9724387,248.08816 C65.9724387,248.08816 74.2897,245.882764 82.8279886,244.906968 C83.2703265,243.112887 86.3003557,241.724524 89.9724387,241.724524 C93.6445217,241.724524 96.6745509,243.112887 97.1168888,244.906968 L97.1168888,244.906968 Z" id="Path-1-Copy-3" fill="#E55643" transform="translate(89.972439, 246.724524) rotate(-20.000000) translate(-89.972439, -246.724524) "></path>
+                <path d="M350,298 C350,298 350,308 359.5,308 C369,308 369,298 369,298 L350,298 L350,298 Z" id="Path-1-Copy-2" fill="#E55643" transform="translate(359.500000, 303.000000) rotate(180.000000) translate(-359.500000, -303.000000) "></path>
+                <rect id="Rectangle-1-Copy-15" stroke="#E55643" stroke-width="3" fill="#E55643" x="296" y="285" width="1" height="52"></rect>
+                <rect id="Rectangle-1-Copy-20" stroke="#E55643" stroke-width="3" fill="#E55643" x="130" y="259" width="1" height="52"></rect>
+                <rect id="Rectangle-1-Copy-33" stroke="#E55643" stroke-width="3" fill="#E55643" transform="translate(164.000000, 257.000000) scale(-1, 1) translate(-164.000000, -257.000000) " x="159" y="231" width="10" height="52"></rect>
+                <rect id="Rectangle-1-Copy-23" stroke="#E55643" stroke-width="3" fill="#E55643" x="38" y="360" width="1" height="52"></rect>
+                <rect id="Rectangle-1-Copy-28" stroke="#E55643" stroke-width="3" fill="#E55643" x="80" y="371" width="1" height="52"></rect>
+                <rect id="Rectangle-1-Copy-29" stroke="#E55643" stroke-width="3" fill="#E55643" x="85" y="371" width="1" height="52"></rect>
+                <rect id="Rectangle-1-Copy-30" stroke="#E55643" stroke-width="3" fill="#E55643" x="90" y="371" width="1" height="52"></rect>
+                <rect id="Rectangle-1-Copy-31" stroke="#E55643" stroke-width="3" fill="#E55643" x="95" y="371" width="1" height="52"></rect>
+                <rect id="Rectangle-1-Copy-32" stroke="#E55643" stroke-width="3" fill="#E55643" transform="translate(109.500000, 399.000000) scale(-1, 1) translate(-109.500000, -399.000000) " x="101" y="373" width="17" height="52"></rect>
+                <rect id="Rectangle-1-Copy-21" stroke="#E55643" stroke-width="3" fill="#E55643" transform="translate(176.000000, 325.500000) scale(-1, 1) translate(-176.000000, -325.500000) " x="174" y="311" width="4" height="29"></rect>
+                <rect id="Rectangle-1-Copy-16" stroke="#E55643" stroke-width="3" fill="#E55643" x="198" y="351" width="1" height="52"></rect>
+            </g>
+        </g>
+        <use id="Oval-2" stroke="#565457" mask="url(#mask-5)" stroke-width="26" xlink:href="#path-4"></use>
+    </g>
+</svg>
