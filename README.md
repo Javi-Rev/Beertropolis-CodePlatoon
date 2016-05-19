@@ -25,7 +25,7 @@ AWS
 
 * git pull
 
-* rake migrate
+* rake db:migrate
 
 * bundle install
 
