@@ -17,28 +17,34 @@ Please feel free to use a different markup language if you do not plan to run
 AWS
 ===
 
-* The following code needs to be enter in the Terminal. You need to go to the same
-  directory as your private AWS keys are located.
+* In the same file you have your AWS keys, you will enter the following ssh command.
 
 * ssh -i Beer.pem ec2-user@52.40.14.9  (Allows you to enter EC2.)
 
-* Move into Beertopolis/
+* Once in EC2, change directory to Beertropolis/
 
-* rake db:drop db:create db:migrate db:seed (Migrate the database.)
+* git pull
+
+* rake migrate
 
 * bundle install
 
-* .  ~/ansible/hacking/env-setup (Sources the environment.)
+* Change directory to beertropolis/ansible/
 
-* Move into the ansible/ 
+* If this is your first time, enter the following commands.
 
-* ansible-playbook -i 'localhost,' -c local playbook.yml (Set ups playbook file and starts server.)
+* rake env
 
-* In a separate window open /tmp/beertroplois  In this window you can stop the EC2 server, restart and start.
+* rake playbook
 
-* pumactl --config-file puma_config.rb start
+* You server should be running.
 
-* pumactl --config-file puma_config.rb restart
+* Change directory to /tmp/beertropolis/
 
-* pumactl --config-file puma_config.rb stop
+* The following commands can start, restart and stop the puma server.
 
+* rake start
+
+* rake restart
+
+* rake stop
