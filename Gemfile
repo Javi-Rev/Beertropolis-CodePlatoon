@@ -43,6 +43,7 @@ group :development, :test do
   gem 'better_errors'
   gem 'capybara'
   gem 'dotenv-rails'
+  gem 'rails_real_favicon'
 end
 
 group :test do
