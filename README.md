@@ -2,14 +2,16 @@
 
 # BEERTROPOLIS
 
+[[https://github.com/Javi-Rev/Beertropolis/blob/master/app/public/images/Beertropolis.png|alt=beer]]
+
 [Beertropolis](http://beertropolis.com)
 
 
 ## AWS
 
-* Create an AWS Instance and generate keys. [Amazon Web Services](http://aws.amazon.com)
+* Create a AWS Instance and generate keys. [Amazon Web Services](http://aws.amazon.com)
 
-* Go to Ansible for deployment information. [Ansible](https://www.ansible.com/)
+* Go to Ansible for in dept deployment information. [Ansible](https://www.ansible.com/)
 
 * In the same file you have your AWS keys, you will enter the following ssh command.
 
@@ -21,7 +23,7 @@ ssh -i Beer.pem ec2-user@52.40.14.9  # Allows you to enter EC2.
 ```sh
 .  ~/ansible/hacking/env-setup # Sources the environment.
 
-ansible-playbook -i 'localhost,' -c local playbook.yml  # Set ups playbook file and starts server.
+ansible-playbook -i 'localhost,' -c local playbook.yml  # Sets up playbook file and starts server.
 ```
 
 After the playbook has run, the server should be running. Change the directory to /tmp/beertropolis/
