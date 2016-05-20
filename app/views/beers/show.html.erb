@@ -18,8 +18,8 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFVHHySuYJJCeAQcJp-WTmQeZ
     </div>
     <div class="col-md-6">
       <div class="row">
-          <div class="toptitle">Average Rating</div>
-          <div class="subtext"><%= @avg_reviews_rating %></div>
+        <div class="toptitle">Average Rating</div>
+        <div class="subtext"><%= @avg_reviews_rating %></div>
       </div>
       <div class="row">
         <div class="col-md-6">
@@ -70,18 +70,21 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFVHHySuYJJCeAQcJp-WTmQeZ
   </div>
   <h1>REVIEWS</h1>
   <% @reviews.limit(10).each do |r| %>
-  <div class="review">
-    <div class="row heading">
-      <div>
-        <p class="subtext col-md-10"><%= r.body %></p>
-        <div class="ratingsbox col-md-2"><%= r.rating %>/5.0</div>
+    <div class="review">
+      <div class="row heading">
+        <div>
+          <p class="subtext col-md-10"><%= r.body %></p>
+          <div class="ratingsbox col-md-2"><%= r.rating %>/5.0</div>
+        </div>
       </div>
     </div>
-  </div>
   <% end %>
 
   <h2>Would you like to add your own review for <%= @beer.name %>?</h2>
   <%= render 'reviews/review' %>
+
+  <div id="map"></div>
+</div>
 
 <script type="text/javascript"
         src="https://www.gstatic.com/charts/loader.js"></script>

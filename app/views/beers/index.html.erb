@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-  
+  <div id="beers_index" class="container_fluid">
     <h1 class="banner">All Beers</h1>
-  
+  </div>
+
+
 
 <div class="list">
-  
+
   <% @beers.each do |b| %>
     <div style ="color:orange">
     <%= link_to b.name, beer_path(b) %>

@@ -10,11 +10,12 @@ body.indexbodyonly {
 }
 
 .logofull {
-  position: absolute;
-  width: auto;
-  height: 60%;
-  top: 10%;
-  left: 20vw;
+  position:  absolute;
+  width:     auto;
+  height:    60%;
+  top:       50%;
+  left:      50%;
+  transform: translate(-50%, -50%);
 }
 
 h1 {
@@ -40,10 +41,16 @@ h1 {
 }
 
 #typeaheadsearch {
-  position: absolute;
-  top: 55%;
-  left: 29%;
+  position:    absolute;
+  top:         63%;
+  left:        50%;
+  transform:   translate(-50%, 0);
   font-weight: bold;
-  font-size: 14px;
-  color: gray;
+  font-size:   14px;
+  color:       #444;
+}
+
+.tt-suggestion {
+  background-color: rgba(255, 255, 255, 0.75);
+
 }

@@ -18,6 +18,7 @@
 @import "variables";
 @import "welcome";
 @import "show";
+@import "index";
 @import url(http://fonts.googleapis.com/css?family=Pacifico);
 
 html, body {
@@ -42,7 +43,6 @@ html, body {
     $shadow:     #533d4a;
     color:       #e55643;
     text-shadow: $shadow 3px 3px;
-
   }
 
 .animated {
@@ -82,26 +82,39 @@ a {
   text-align:      center;
   padding:         14px 16px;
   text-decoration: none;
-
-}
-
-.stylizedname {
-  color: #4D4A4E;
-}
-
-.header {
-  top: 0;
 }
 
 footer {
   background-color: #e55643;
   display:          block;
-  position:         fixed;
+  position:         absolute;
   bottom:           0;
-  width:            100%;
+  left:             0;
+  right:            0;
   border-top-color: #565457;
   border-top-width: 3px;
   border-top-style: ridge;
+  margin:           0;
+  a { padding: initial; }
+  p {
+    display: inline-block;
+    position: relative;
+    bottom: 0;
+    padding: 0;
+    margin-top:    1em;
+    margin-bottom: 1em;
+    &:nth-child(1) {
+      margin-left: 3em;
+    }
+    &:nth-child(2) {
+      margin-left: 1em;
+    }
+    &:nth-child(3) {
+      position:     absolute;
+      margin-right: 3em;
+      right:        0;
+    }
+  }
 }
 
 .list {
@@ -125,9 +138,20 @@ footer {
   position: absolute;
   font-size: 1.5em;
 }
-.headername {
-  left:        50%;
-  font-size:   2em;
-  font-family: 'Pacifico', sans-serif;
-  font-weight: bold;
+
+.header {
+  li {
+    font-size: 1.5em;
+    float: right;
+    vertical-align: middle;
+    margin-top: 0.3em;
+  }
+  .name {
+    margin-top: inherit;
+    float: left;
+    font-size: 2em;
+    font-family: 'Pacifico', sans-serif;
+    color: #4D4A4E;
+    font-weight: bold;
+  }
 }
