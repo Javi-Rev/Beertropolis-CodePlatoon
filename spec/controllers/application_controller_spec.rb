@@ -12,7 +12,7 @@ RSpec.describe BeersController, :type => :controller do
   describe "GET show" do
     it "renders the beers show template" do
       get :show
-      expect(response).to redirect_to(:action => 'show')
+      expect(response).to redirect_to(:action => 'index')
     end
   end
 
