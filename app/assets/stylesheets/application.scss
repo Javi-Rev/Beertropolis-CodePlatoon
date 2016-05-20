@@ -84,6 +84,16 @@ a {
   text-decoration: none;
 }
 
+
+.bottom {
+  display:          block;
+  position:         fixed;
+  bottom:           0;
+  width:            100%;
+  border-top-color: #565457;
+  border-top-width: 3px;
+  border-top-style: ridge;
+}
 footer {
   background-color: #e55643;
   display:          block;
