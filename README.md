@@ -1,27 +1,23 @@
 [![Build Status](https://secure.travis-ci.org/Javi-Rev/Beertropolis.png?branch=master)](http://travis-ci.org/Javi-Rev/Beertropolis)
 
-BEERTROPOLIS
-============
+# BEERTROPOLIS
 
-* Ruby 2.3.0
-* You will need to install Phantom.js
-* Ask a team member for environment variables
-* Rake DB setup
-* Rake to run test suite (tests use  RSpec)
-* Third-party APIs: twitter Oauth, Google maps
-* Other technologies used: Google charts
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
 
-AWS
-===
+# AWS
+
+
+* Create an AWS Instance and generate keys. 
 
 * In the same file you have your AWS keys, you will enter the following ssh command.
 
 * ssh -i Beer.pem ec2-user@52.40.14.9  (Allows you to enter EC2.)
 
-* Once in EC2, change directory to Beertropolis/
+* Once in EC2, change directory to Beertropolis/ansible and run
+
+* .  ~/ansible/hacking/env-setup (Sources the environment.)
+
+*  ansible-playbook -i 'localhost,' -c local playbook.yml (Set ups playbook file and starts server.)
 
 * git pull
 
