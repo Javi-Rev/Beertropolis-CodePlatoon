@@ -1,50 +1,48 @@
 [![Build Status](https://secure.travis-ci.org/Javi-Rev/Beertropolis.png?branch=master)](http://travis-ci.org/Javi-Rev/Beertropolis)
 
-BEERTROPOLIS
-============
+# BEERTROPOLIS
 
-* Ruby 2.3.0
-* You will need to install Phantom.js
-* Ask a team member for environment variables
-* Rake DB setup
-* Rake to run test suite (tests use  RSpec)
-* Third-party APIs: twitter Oauth, Google maps
-* Other technologies used: Google charts
+![alt beer](https://github.com/Javi-Rev/Beertropolis/blob/master/app/public/images/Beertropolis.png)
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+[Beertropolis](http://beertropolis.com)
 
-AWS
-===
+
+## AWS
+
+* Create a AWS Instance and generate keys. [Amazon Web Services](http://aws.amazon.com)
+
+* Go to Ansible for in dept deployment information. [Ansible](https://www.ansible.com/)
 
 * In the same file you have your AWS keys, you will enter the following ssh command.
 
-* ssh -i Beer.pem ec2-user@52.40.14.9  (Allows you to enter EC2.)
+```sh
+ssh -i Beer.pem ec2-user@52.40.14.9  # Allows you to enter EC2.
+```
+* Once in EC2, change directory to Beertropolis/ansible and run
 
-* Once in EC2, change directory to Beertropolis/
+```sh
+.  ~/ansible/hacking/env-setup # Sources the environment.
 
-* git pull
+ansible-playbook -i 'localhost,' -c local playbook.yml  # Sets up playbook file and starts server.
+```
 
-* rake migrate
+After the playbook has run, the server should be running. Change the directory to /tmp/beertropolis/
+Run the following commands.
 
-* bundle install
+```sh
+git pull
 
-* Change directory to beertropolis/ansible/
+rake db:migrate
 
-* If this is your first time, enter the following commands.
-
-* rake env
-
-* rake playbook
-
-* You server should be running.
-
-* Change directory to /tmp/beertropolis/
+bundle install
+```
 
 * The following commands can start, restart and stop the puma server.
 
-* rake start
+```sh
+rake start
 
-* rake restart
+rake restart
 
-* rake stop
+rake stop
+```
