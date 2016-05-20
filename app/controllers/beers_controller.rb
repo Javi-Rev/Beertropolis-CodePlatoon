@@ -9,7 +9,7 @@ class BeersController < ApplicationController
     @reviews = @beer.reviews.order(:created_at)
     @last_transaction_date =               @reviews.last.transaction_date
     @total_transactions =                  @reviews.count
-    @last_transaction_price =              @reviews.last.transaction_price
+    @last_transaction_price =              @reviews.last.price
     @last_30_days_reviews_avg =            last_30_days_reviews_avg
     @last_90_days_reviews_avg =            last_90_days_reviews_avg
     @last_30_days_reviews_percent_change = last_30_days_reviews_percent_change
@@ -63,7 +63,7 @@ class BeersController < ApplicationController
     last_30_days_reviews.each do |review|
       sum += review.price.round(2)
     end
-    '$' + (sum / last_30_days_reviews.count).round(2).to_s
+    sum / last_30_days_reviews.count
   end
 
   def last_90_days_reviews_avg
@@ -72,7 +72,7 @@ class BeersController < ApplicationController
     last_90_days_reviews.each do |review|
       sum += review.price.round(2)
     end
-    '$' + (sum / last_90_days_reviews.count).round(2).to_s
+    sum / last_90_days_reviews.count
   end
 
   def last_30_days_reviews_percent_change
@@ -81,7 +81,7 @@ class BeersController < ApplicationController
     last_30_days_reviews.each do |review|
       prices << review.price.round(2)
     end
-    change = (((prices.max - prices.min) / prices.min) * 100).round(2).to_s + '%'
+    (((prices.max - prices.min) / prices.min) * 100).round(2).to_s + '%'
   end
 
   def avg_reviews_rating
