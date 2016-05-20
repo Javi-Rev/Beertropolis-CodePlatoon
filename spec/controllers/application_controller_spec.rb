@@ -9,23 +9,23 @@ RSpec.describe BeersController, :type => :controller do
     end
   end
 
-  describe "GET show" do
+  describe "index" do
     it "renders the beers show template" do
-      get :show
-      expect(response).to redirect_to('beers_show_path')
+      get :index
+      expect(response).to redirect_to('show')
     end
   end
 
-  describe "GET new" do
+  describe "index" do
     it "renders the beers new template" do
-      get :new
+      get :index
       expect(response).to render_template("new")
     end
   end
 
-  describe "GET edit" do
+  describe "index" do
     it "renders the edit beer template" do
-      get :edit
+      get :index
       expect(response).to render_template("edit") 
     end
   end
