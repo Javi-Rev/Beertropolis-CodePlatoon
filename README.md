@@ -1,6 +1,7 @@
 [![Build Status](https://secure.travis-ci.org/Javi-Rev/Beertropolis.png?branch=master)](http://travis-ci.org/Javi-Rev/Beertropolis)
 
-# [BEERTROPOLIS](http://beertropolis.com
+[BEERTROPOLIS](http://beertropolis.com
+======================================
 
 
 
