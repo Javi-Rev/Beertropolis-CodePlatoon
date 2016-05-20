@@ -1,7 +1,7 @@
 class BeersController < ApplicationController
 
   def index
-    @beers = Beer.all
+    @beers = Beer.where(["name like ?", "%#{params['filter']}%"])
   end
 
   def show

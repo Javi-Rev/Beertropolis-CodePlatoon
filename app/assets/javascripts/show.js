@@ -88,37 +88,23 @@ function drawAxisTickColors() {
       data.addColumn('number', 'Price');
 
       data.addRows (chartData);
-      // data.addRows ([
       //   [new Date(2015,00,05),20.5],
-      //   [new Date(2015,01,06),23.2],
-      //   [new Date(2015,02,07),30.223423424],
-      //   [new Date(2015,03,08),32.23234234],
-      //   [new Date(2015,04,09),36],
-      //   [new Date(2015,05,02),40],
-      //   [new Date(2015,06,03),50],
-      //   [new Date(2015,07,07),30],
-      //   [new Date(2015,08,09),33],
-      // ]);
-
-
-        // (gon.prices);
-        // [54, 71, 63], [55, 72, 64], [56, 73, 65], [57, 75, 67], [58, 70, 62], [59, 68, 60],
-        // [60, 64, 56], [61, 60, 52], [62, 65, 57], [63, 67, 59], [64, 68, 60], [65, 69, 61],
-        // [66, 70, 62], [67, 72, 64], [68, 75, 67], [69, 80, 72]
 
       var options = {
 
-        width: 650,
+        width: 700,
         height: 400,
-        title: 'Price History (USD)',
+        // title: 'Price History (USD)',
         lineWidth: 4,
+        legend: {
+          position: 'none',
+        },
         trendlines: {
           0: {
             type: 'exponential',
             }
         },
         hAxis: {
-          title: 'Date',
           textStyle: {
             color: '#01579b',
             fontSize: 14,
