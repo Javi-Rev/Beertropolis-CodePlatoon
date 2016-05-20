@@ -69,7 +69,7 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFVHHySuYJJCeAQcJp-WTmQeZ
     </div>
   </div>
   <h1>REVIEWS</h1>
-  <% @reviews.limit(10).each do |r| %>
+  <% @recent_reviews.each do |r| %>
     <div class="review">
       <div class="row heading">
         <div>
