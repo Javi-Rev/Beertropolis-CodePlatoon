@@ -6,6 +6,10 @@
 
 [Beertropolis](http://beertropolis.com)
 
+*  Beertropolis is for craft beer lovers like ourselves. We have created a site for everyone with our common interest to list prices, reviews and find where their favorite beers are located!
+*  Beertropolis is a web application aggregating user generated data to provide transparency around craft beer prices and transactions in the secondary market.
+*  Beertropolis leverages geolocation data to also provide review locations. 
+
 
 ## AWS
 
