@@ -1,7 +1,7 @@
 require 'rails_helper'
 require 'spec_helper'
 
-Rspec.describe BeersController. :type => :controller do
+Rspec.describe BeersController, :type => :controller do
   describe "GET index" do
     it "renders the beers index template" do
       get :index
