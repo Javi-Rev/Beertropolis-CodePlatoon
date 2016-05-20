@@ -24,7 +24,7 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFVHHySuYJJCeAQcJp-WTmQeZ
       <div class="row">
         <div class="col-md-6">
           <p class="subtitle">30 Day Average Price</p>
-          <p class="subtext"><%= @last_30_days_reviews_avg %></p>
+          <p class="subtext"><%= number_to_currency @last_30_days_reviews_avg %></p>
         </div>
         <div class="col-md-6">
           <p class="subtitle">30 Day Percent Change</p>
@@ -34,7 +34,7 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFVHHySuYJJCeAQcJp-WTmQeZ
       <div class="row">
         <div class="col-md-6">
           <p class="subtitle">Latest Transaction Price</p>
-          <p class="subtext"><%= @last_transaction_price %></p>
+          <p class="subtext"><%= number_to_currency @last_transaction_price %></p>
         </div>
         <div class="col-md-6">
           <p class="subtitle">Total Transactions</p>
@@ -48,7 +48,7 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFVHHySuYJJCeAQcJp-WTmQeZ
         </div>
         <div class="col-md-6">
           <p class="subtitle">90 Day Average Price</p>
-          <p class="subtext"><%= @last_90_days_reviews_avg %></p>
+          <p class="subtext"><%= number_to_currency @last_90_days_reviews_avg %></p>
         </div>
       </div>
     </div>
