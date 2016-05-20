@@ -1,7 +1,7 @@
 require 'rails_helper'
 require 'spec_helper'
 
-RSpec.describe AboutController do
+RSpec.describe AboutController, :type => :controller do
   describe "GET index" do
     it "renders the index template" do
       get :index
