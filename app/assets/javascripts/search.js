@@ -27,7 +27,7 @@ $(function() {
   $('#typeaheadsearch .typeahead').typeahead({
     hint: true,
     highlight: true,
-    minLength: 1
+    minLength: 1,
   },
   {
     source: substringMatcher(beerNames)
