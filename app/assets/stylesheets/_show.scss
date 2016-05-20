@@ -1,5 +1,5 @@
 #beershow {
-  padding-top:    60px;
+  padding-top:    80px;
   padding-bottom: 100px;
   padding-left:   30px;
   padding-right:  30px;
@@ -7,18 +7,93 @@
   h1 {
     position:    static;
     text-align:  center;
-    color:       gray;
-    font-size:   2em;
+    color:       #23527C;
+    font-size:   3em;
+    font-weight: bold;
+    padding-top: 20px;
+  }
+
+    h2 {
+      color:      #A52714;
+      text-align: center;
+    }
+    .mapbuttons {
+      margin-top: 10px;
+      width:      100%;
+    }
+
+  .toptitle {
+    border: 3px solid #01579b;
+    background: #E55643;
+    text-align: center;
+    font-size: 2em;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    margin: 0 00 10px;
+  }
+  .subtitle {
+    border: 3px solid #01579b;
+    background: #E55643;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+
+  }
+
+  .charttitle {
+    border: 3px solid #01579b;
+    background: #E55643;
+    text-align: center;
+    font-size: 26px;
+    font-family: Helvetica, sans-serif;
     font-weight: bold;
   }
 
-  h2 {
-    color:      red;
+  .ratingsbox {
+    border: 3px solid #01579b;
+    background: #E55643;
     text-align: center;
+    font-size: 1.5em;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+
   }
-  .mapbuttons {
-    margin-top: 10px;
-    width:      100%;
+  .subtext {
+    border: 3px solid #01579b;
+    background: #99B3CC;
+    text-align: center;
+    text-align: center;
+    color: #23527C;
+    text-align: center;
+    font-size: 2em;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    padding-top: 12px;
+    margin: 0 0 10px;
+  }
+
+  .blurb {
+    // border: 3px solid #01579b;
+    color: #23527C;
+    text-align: left;
+    font-size: 1.5em;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+
+  }
+  .heatmap {
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    border: 3px solid #01579b;
+    background: white;
+    text-align: center;
+    font-size: 1em;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    color: #E55643;
+    margin: 0 00 5px;
   }
   .review {
     padding-top: 8px;
@@ -35,7 +110,8 @@
 }
 
 #map {
-  height: 300px;
+  height: 600px;
+  border: 3px solid #01579b;
 
 h1 {
   position: absolute;
@@ -66,7 +142,7 @@ h3 {
 
 #chart_div {
   height:   400px;
-  width:    600px;
+  // width:    550px;
 }
 
 #beer_stats {

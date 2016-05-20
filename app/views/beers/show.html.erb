@@ -11,75 +11,79 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFVHHySuYJJCeAQcJp-WTmQeZ
     <h2><%= @beer.style %></h2>
   </div>
   <div class="row">
-    <p>I AM THE BEER BLURB</p>
+    <div class="col-md-6 panel panel-default">
+      <div class="charttitle col-md-12">Transaction Prices</div>
+      <div class="col-md-12" id="chart_div">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row">
+        <div class="toptitle">Average Rating</div>
+        <div class="subtext"><%= @avg_reviews_rating %></div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <p class="subtitle">30 Day Average Price</p>
+          <p class="subtext"><%= @last_30_days_reviews_avg %></p>
+        </div>
+        <div class="col-md-6">
+          <p class="subtitle">30 Day Percent Change</p>
+          <p class="subtext"><%= @last_30_days_reviews_percent_change %></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <p class="subtitle">Latest Transaction Price</p>
+          <p class="subtext"><%= @last_transaction_price %></p>
+        </div>
+        <div class="col-md-6">
+          <p class="subtitle">Total Transactions</p>
+          <p class="subtext"><%= @total_transactions %></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <p class="subtitle">Last Transaction Date</p>
+          <p class="subtext"><%= @last_transaction_date %></p>
+        </div>
+        <div class="col-md-6">
+          <p class="subtitle">90 Day Average Price</p>
+          <p class="subtext"><%= @last_90_days_reviews_avg %></p>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="row">
-    <div class="col-md-6" id="chart_div">
+    <div class="blurb col-md-6">
+      <p><%= @beer.description %></p>
     </div>
-    <div class="col-md-5">
-      <div class="row">
-          <p>Average Review Rating</p>
-          <p><%= @avg_reviews_rating %></p>
+    <div class="col-md-6" >
+      <div class="col-md-12" id="map">
       </div>
-      <div class="row">
-        <div class="col-md-6">
-          <p>30 Day Average Price</p>
-          <p><%= @last_30_days_reviews_avg %></p>
-        </div>
-        <div class="col-md-6">
-          <p>30 Day Percent Change</p>
-          <p><%= @last_30_days_reviews_percent_change %></p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <p>Latest Transaction Price</p>
-          <p><%= @last_transaction_price %></p>
-        </div>
-        <div class="col-md-6">
-          <p>Total Transactions</p>
-          <p><%= @total_transactions %></p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <p>Last Transaction Date</p>
-          <p><%= @last_transaction_date %></p>
-        </div>
-        <div class="col-md-6">
-          <p>90 Day Average Price</p>
-          <p><%= @last_90_days_reviews_avg %></p>
-        </div>
+      <div class="col-md-12" id="floating-panel">
+        <button class="heatmap mapbuttons" onclick="toggleHeatmap()">Toggle Heatmap</button>
+        <button class="heatmap mapbuttons" onclick="changeGradient()">Change gradient</button>
+        <button class="heatmap mapbuttons" onclick="changeRadius()">Change radius</button>
+        <button class="heatmap mapbuttons" onclick="changeOpacity()">Change opacity</button>
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-md-10" id="map">
-    </div>
-    <div class="col-md-2" id="floating-panel">
-      <button class="mapbuttons" onclick="toggleHeatmap()">Toggle Heatmap</button>
-      <button class="mapbuttons" onclick="changeGradient()">Change gradient</button>
-      <button class="mapbuttons" onclick="changeRadius()">Change radius</button>
-      <button class="mapbuttons" onclick="changeOpacity()">Change opacity</button>
-    </div>
-  </div>
-  <h2>Reviews</h2>
+  <h1>REVIEWS</h1>
   <% @reviews.limit(10).each do |r| %>
-  <div class="review">
-    <div class="row heading">
-      <div>
-        <div class="col-md-6">Name: <%= r.name %></div>
-        <div class="col-md-6">Review: <%= r.rating %></div>
+    <div class="review">
+      <div class="row heading">
+        <div>
+          <p class="subtext col-md-10"><%= r.body %></p>
+          <div class="ratingsbox col-md-2"><%= r.rating %>/5.0</div>
+        </div>
       </div>
     </div>
-    <p class="row"><%= r.body %></p>
-  </div>
   <% end %>
 
   <h2>Would you like to add your own review for <%= @beer.name %>?</h2>
   <%= render 'reviews/review' %>
 
-<div id="map"></div>
+  <div id="map"></div>
 </div>
 
 <script type="text/javascript"
@@ -88,5 +92,3 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFVHHySuYJJCeAQcJp-WTmQeZ
 google.charts.load('current', {packages: ['corechart', 'line']});
 google.charts.setOnLoadCallback(drawAxisTickColors);
 </script>
-
-

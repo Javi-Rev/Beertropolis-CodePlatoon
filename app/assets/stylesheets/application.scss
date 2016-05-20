@@ -121,6 +121,9 @@ footer {
 .paragraph {
   text-align: center;
   color:      orange;
+  top: 50%;
+  position: absolute;
+  font-size: 1.5em;
 }
 .headername {
   left:        50%;

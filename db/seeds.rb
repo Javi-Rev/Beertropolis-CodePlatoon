@@ -1,23 +1,31 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
 
-# Beer.create(name: 'Pliny The Elder',                style: 'Imperial IPA',   manufacturer: 'Russian River')
-# Beer.create(name: 'Julius',                         style: 'APA',            manufacturer: 'Tree House')
-# Beer.create(name: 'Bourbon County Coffee Stout',    style: 'Imperial Stout', manufacturer: 'Goose Island')
-# Beer.create(name: 'Kentucky Brunch Brand Stout',    style: 'Imperial Stout', manufacturer: 'Toppling Goliath')
-# Beer.create(name: 'Pliny The Younger',              style: 'Imperial IPA',   manufacturer: 'Russian River')
-# Beer.create(name: 'Heady Topper',                   style: 'Imperial IPA',   manufacturer: 'Russian River')
+# Beer.create(name: 'Zombie Dust', style: 'American Pale Ale', manufacturer: 'Three Floyds',
+#             description: 'This intensely hopped and gushing undead Pale Ale will be one’s
+#                           only respite after the zombie apocalypse. Created with our marvelous
+#                           friends in the comic industry. Formerly known as Cenotaph: A medium
+#                           bodied single hop beer showcasing Citra hops from the Yakima Valley, USA.')
+
+# Beer.create(name: 'Bourbon County Coffee Stout', style: 'Imperial Stout', manufacturer: 'Goose Island',
+#             description: '2014 Release - Intelligentsia Zirikana Coffee Beans\n
+#                           2013 Release - Intelligentsia "Los Inmortales"\n
+#                           2012 Release - Intelligentsia La Tortuga Beans\n
+#                           2011 Release - Intelligentsia Anjilanaka Beans\n
+#                           2010 Release - Intelligentsia Black Cat Espresso Beans')
+
+# Beer.create(name: 'Heady Topper', style: 'Imperial IPA', manufacturer: 'Russian River',
+#             description: 'A double India Pale Ale brewed by The Alchemist in Waterbury, VT. It is
+#                           unfiltered and contains 8% ABV, with hints of citrus flavors. Unpasteurized,
+#                           it is kept refrigerated by authorized retailers until point of sale. As of
+#                           December, 2015, it was rated the fifth best beer in the world by Beer Advocate,
+#                           and has been described as "a complex web of genius."')
+
+
 require 'faker'
 
-beers = 10
-reviews_per_beer = 50
-end_date = '5/1/2016'
-start_date = '1/1/2015'
+beers = 25
+reviews_per_beer = 200
 
 Beer.transaction do
   beers.times do |c|
@@ -25,6 +33,7 @@ Beer.transaction do
       beer.name = Faker::Beer.name
       beer.style = Faker::Beer.style
       beer.manufacturer = Faker::Company.name
+      beer.description = Faker::Lorem.paragraph(4, true, 3)
 
       review_graph_offset = rand * 2*Math::PI
       review_oscilations  = rand*2.25 + 0.75 # 0.75-3.0
@@ -35,8 +44,6 @@ Beer.transaction do
 
         beer.reviews.build manufacturer: Faker::Company.name,
                            name:         Faker::Beer.name,
-                           # review_date: Faker::Date.between(1.year.ago, Date.today),
-                           # location:     Faker::Address.postcode,
                            price:        Math.sin(price_fluctuation)*65+85 + rand*50-25,
                            rating:       Faker::Number.between(1, 5),
                            body:         Faker::Lorem.paragraph(3, true, 3),

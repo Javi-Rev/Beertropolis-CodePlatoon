@@ -37,10 +37,12 @@
 
 <script>
 
+  if(navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(geoPosition) {
       var coords  =  geoPosition.coords
       document.getElementById('latitude').value = coords.latitude;
       document.getElementById('longitude').value = coords.longitude;
     });
+  }
 </script>
 </html>

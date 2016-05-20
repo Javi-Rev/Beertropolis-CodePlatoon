@@ -12,6 +12,6 @@ RSpec.describe "Beers views", :type => :feature do
     assert page.has_content?('Zombie Dust')
 
     click_on 'Zombie Dust'
-    assert page.has_content?('Reviews')
+    assert page.has_content?('REVIEWS')
   end
 end
