@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20160510141915) do
     t.string   "name"
     t.string   "style"
     t.string   "manufacturer"
+    t.text     "description"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
