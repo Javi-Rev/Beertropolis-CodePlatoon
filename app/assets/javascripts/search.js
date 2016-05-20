@@ -24,19 +24,22 @@ var beerNames = gon.Names
 var path_id
 
 $(function() {
-  $('#typeaheadsearch .typeahead').typeahead({
-    hint: true,
-    highlight: true,
-    minLength: 1
-  },
-  {
-    source: substringMatcher(beerNames)
-  }).on('typeahead:selected', function(event, selection) {
+  function accept(event, selection) {
+    var path_id;
     for(var i = 0; i < beerData.length; i++) {
       if (beerData[i].name === selection) {
         path_id = beerData[i].id
       }
     }
     window.location = "/beers/" + path_id
-  });
+  }
+
+  $('#typeaheadsearch .typeahead').typeahead({
+    hint: true,
+    highlight: true,
+    minLength: 1,
+  },
+  { source: substringMatcher(beerNames)
+  }).on('typeahead:select', accept)
+    .on('typeahead:autocomplete', accept);
 })
