@@ -85,14 +85,6 @@ a {
 
 }
 
-.stylizedname {
-  color: #4D4A4E;
-}
-
-.header {
-  top: 0;
-}
-
 footer {
   background-color: #e55643;
   display:          block;
@@ -125,9 +117,20 @@ footer {
   position: absolute;
   font-size: 1.5em;
 }
-.headername {
-  left:        50%;
-  font-size:   2em;
-  font-family: 'Pacifico', sans-serif;
-  font-weight: bold;
+
+.header {
+  li {
+    font-size: 1.5em;
+    float: right;
+    vertical-align: middle;
+    margin-top: 0.3em;
+  }
+  .name {
+    margin-top: inherit;
+    float: left;
+    font-size: 2em;
+    font-family: 'Pacifico', sans-serif;
+    color: #4D4A4E;
+    font-weight: bold;
+  }
 }
