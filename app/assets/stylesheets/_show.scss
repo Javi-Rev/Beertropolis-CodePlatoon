@@ -41,6 +41,15 @@
 
   }
 
+  #starry {
+    font-size: 6em;
+    line-height: 40%;
+    span {
+      position: relative;
+      bottom: -12px;
+    }
+  }
+
   .charttitle {
     border: 3px solid #01579b;
     background: #E55643;

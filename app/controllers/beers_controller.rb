@@ -85,11 +85,13 @@ class BeersController < ApplicationController
   end
 
   def avg_reviews_rating
+    output = ''
     sum = 0
     @reviews.each do |review|
       sum += review.rating
     end
-    (sum / @reviews.count).round(1).to_s + ' stars'
+    (sum / @reviews.count).to_i.times { output += '*' }
+    output
   end
 
   private
