@@ -6,6 +6,7 @@ class BeersController < ApplicationController
 
   def show
     @beer = Beer.find(params[:id])
+    @recent_reviews = @beer.reviews.order("created_at desc").limit(10)
     @reviews = @beer.reviews.order(:created_at)
     @last_transaction_date =               @reviews.last.transaction_date
     @total_transactions =                  @reviews.count
