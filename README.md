@@ -2,7 +2,7 @@
 
 # BEERTROPOLIS
 
-[[https://github.com/Javi-Rev/Beertropolis/blob/master/app/public/images/Beertropolis.png|alt=beer]]
+![alt beer](https://github.com/Javi-Rev/Beertropolis/blob/master/app/public/images/Beertropolis.png)
 
 [Beertropolis](http://beertropolis.com)
 
